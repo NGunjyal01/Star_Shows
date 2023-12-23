@@ -36,11 +36,11 @@ const Header = () => {
   },[]);
       
   return (
-    <div className='absolute w-screen px-8 py-4 z-10 flex justify-between'>
+    <div className='absolute w-screen px-8 py-4 z-10 flex justify-between bg-gradient-to-b from-black'>
       <img className='w-44' src={LOGO} alt='logo'/>
       {user && <div className='flex'>
         <img className='w-20' src={user?.photoURL} alt="avatar"></img>
-        <button className='underline' onClick={handleSignOut}>Sign Out</button>
+        <button className='text-white' onClick={handleSignOut}>Sign Out</button>
       </div>}
     </div>
   )
