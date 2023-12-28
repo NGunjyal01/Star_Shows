@@ -20,6 +20,7 @@ const Browse = () => {
 
   return (
     <div>
+      hello
       <Header />
       {showGPTSearch ? (
         <GPTSearchPage />
