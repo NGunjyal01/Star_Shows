@@ -1,11 +1,16 @@
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import useMovieDetails from "../hooks/useMovieDetails";
+import MainVideoBackground from "./MainVideoBackground";
+import MainMovieDetails from "./MainMovieDetails";
+import MainMovieRecommendations from "./MainMovieRecommendations";
 
 const MoviePage = ({ onClose }) => {
 
     const movie_id = useSelector(store => store.mainMovie.mainMovieId);
+    //getting movie details and add them to store
     useMovieDetails(movie_id);
+    const mainMovieDetails = useSelector(store => store.mainMovie.mainMovieDetails);
 
     useEffect(() => {
     const handleScroll = (e) => {
@@ -24,22 +29,23 @@ const MoviePage = ({ onClose }) => {
         window.removeEventListener("scroll", handleScroll);
     };
     }, []);
-
-
-
+    if(!mainMovieDetails)    return null;
     return (
-    <div className="fixed z-20 top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-25 backdrop-blur-sm">
-        <div className="mt-14 w-1/2 h-full bg-white text-black overflow-y-auto">
+    <div className="fixed z-20 w-full h-full flex items-center justify-center bg-black bg-opacity-25 backdrop-blur-sm">
+        <div className="absolute mt-14 pb-10 w-[70%] md:w-1/2 h-full bg-[#181818] overflow-y-auto  rounded-lg scrollbar-hide">
             <div>
-                Hello
+                <button className="absolute py-2.5 px-4 text-xl mt-4 right-2 font-medium hover:border-2 rounded-full bg-[#181818] text-white" onClick={onClose}>✕</button>
+                <div className="absolute mt-80 pl-4">
+                    <h1 className="text-xl text-white font-bold">{mainMovieDetails?.title}</h1>
+                    <button className='mt-4 px-4 py-2 md:px-14 md:py-4 bg-white text-black font-bold rounded-lg hover:bg-opacity-80'>Play</button>
+                </div>
+                <MainVideoBackground movie_id={movie_id}/>
+                <MainMovieDetails/>
+                <MainMovieRecommendations movie_id={movie_id}/>
             </div>
         </div>
-        <button
-        onClick={onClose}
-        className="mt-4 px-4 py-2 bg-blue-500 text-white"
-        >
-        Close
-        </button>
+        
+        
     </div>
     );
 };
