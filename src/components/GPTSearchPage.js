@@ -6,10 +6,7 @@ import GPTMovieSuggestions from './GPTMovieSuggestions'
 const GPTSearchPage = () => {
   return (
     <>
-      <div className="fixed -z-10">
-        <img src={BG_URL} alt='logo' className='h-screen object-cover sm:w-screen'/>
-      </div>
-      <div>
+      <div className='bg-[#222831] fixed h-full w-full'>
         <GPTSearchBar/>
         <GPTMovieSuggestions/>
     </div>

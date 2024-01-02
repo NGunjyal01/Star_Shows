@@ -10,11 +10,10 @@ const MainMovieRecommendations = ({ movie_id }) => {
     useSimilarMovies(movie_id);
     const movies = useSelector(store => store.mainMovie);
 
-
     return (
         <div>
-            <MovieList title={"Recommendations"} movies={movies.movieRecommendations}/>
-            <MovieList title={"Similar"} movies={movies.similarMovies}/>
+            {movies.movieRecommendations && <MovieList title={"Recommendations"} movies={movies.movieRecommendations}/>}
+            {movies.similarMovies && <MovieList title={"Similar"} movies={movies.similarMovies}/>}
         </div>
     )
 }

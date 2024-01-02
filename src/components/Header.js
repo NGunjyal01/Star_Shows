@@ -7,6 +7,7 @@ import { addUser, removeUser } from "../utils/userSlice";
 import { LOGO, SUPPORTED_LANG } from "../utils/constants";
 import { toggleGPTSearch } from "../utils/GPTSlice";
 import { changeLanguage } from "../utils/configSlice";
+import { PiUserListFill } from "react-icons/pi";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -43,7 +44,7 @@ const Header = () => {
             photoURL: photoURL,
           })
         );
-        navigate("/browse");
+        navigate("/body/browse");
       } else {
         // User is signed out
         dispatch(removeUser());
@@ -54,8 +55,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="absolute w-full px-8 py-4 z-10 bg-gradient-to-b from-black flex flex-col md:flex-row justify-between">
-      <img className="w-44 mx-auto md:mx-0" src={LOGO} alt="logo" />
+    <div className="absolute w-full px-8 py-4 z-10 flex flex-col md:flex-row justify-between">
       {user && (
         <div className="flex justify-between p-2">
           {showGPTSearch &&
@@ -76,10 +76,8 @@ const Header = () => {
           >
             {showGPTSearch?"HomePage":"GPT Search"}
           </button>
-          <img className="w-12 h-12" src={user?.photoURL} alt="avatar"></img>
-          <button className="text-white" onClick={handleSignOut}>
-            Sign Out
-          </button>
+          <PiUserListFill style={{color:"#00ADB5"}} size={40}/>
+          <button className="text-white" onClick={handleSignOut}> Sign Out </button> 
         </div>
       )}
     </div>

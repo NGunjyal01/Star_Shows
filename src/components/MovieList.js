@@ -11,8 +11,7 @@ const MovieList = ({title,movies}) => {
     const slideRight = ()=>{
         var slider = document.getElementById(title);
         slider.scrollLeft = slider.scrollLeft+400;  
-     }
-
+    }
 
     return movies && (
         <div className="px-6 text-white">

@@ -14,7 +14,7 @@ const MainMovieDetails = () => {
             <div className="flex">
                 <div className="w-[65%]">
                     <div className="flex">
-                        <h2 className="mr-6">{release_date.substr(0,4)}</h2>
+                        <h2 className="mr-6">{release_date?.substr(0,4)}</h2>
                         <h2>{runtime + " min"}</h2>
                     </div>
                     <p className="text-lg mt-4">{overview}</p>
