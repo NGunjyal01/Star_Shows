@@ -6,6 +6,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Login from "./components/Login";
 import Browse from "./components/Browse";
 import MoviePage from "./components/MoviePage";
+import Movies from "./components/Movies";
+import TVShows from "./components/TVShows";
+import MyList from "./components/MyList";
+import Genre from "./components/Genre";
 
 function App() {
 
@@ -22,6 +26,26 @@ function App() {
           path: 'browse',
           element: <Browse/>
         },
+        {
+          path: 'movies',
+          element: <Movies/>
+        },
+        {
+          path: 'tvshows',
+          element: <TVShows/>
+        },
+        {
+          path: 'mylist',
+          element: <MyList/>
+        },
+        {
+          path: 'genre',
+          element: <Genre/>
+        },
+        // {
+        //   path: 'moviePage',
+        //   element: <MoviePage/>
+        // }
       ]
     }
   ]);
