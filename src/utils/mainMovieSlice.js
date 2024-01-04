@@ -9,6 +9,8 @@ const mainMovieSlice = createSlice({
         mainMovieCast: null,
         movieRecommendations: null,
         similarMovies: null,
+        searchInput: null,
+        searchResults: null,
     },
     reducers: {
         addMainMovieId: (state,action) =>{
@@ -34,11 +36,17 @@ const mainMovieSlice = createSlice({
         },
         addSimilarMovies: (state,action) =>{
             state.similarMovies = action.payload;
+        },
+        addSearchInput: (state,action) =>{
+            state.searchInput = action.payload;
+        },
+        addSearchResults: (state,action) =>{
+            state.searchResults = action.payload;
         }
     },
 });
 
 
-export const { addMainMovieId,removeMainMovieId,addMainMovieDetails,removeMainMovieDetails,addMainMovieTrailer,addmainMovieCast,addMovieRecommendations,addSimilarMovies } = mainMovieSlice.actions;
+export const { addMainMovieId,removeMainMovieId,addMainMovieDetails,removeMainMovieDetails,addMainMovieTrailer,addmainMovieCast,addMovieRecommendations,addSimilarMovies,addSearchInput,addSearchResults } = mainMovieSlice.actions;
 
 export default mainMovieSlice.reducer;

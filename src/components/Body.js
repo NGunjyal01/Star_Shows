@@ -1,16 +1,14 @@
 import React from 'react'
 import Header from './Header'
-import { Outlet } from 'react-router-dom'
-import Login from './Login'
-import { useSelector } from 'react-redux'
+import { Outlet, useLocation } from 'react-router-dom'
 
 const Body = () => {
 
-    const user = useSelector(store => store.user);
-
+    const location = useLocation();
+    const showSearch = location.pathname.substr(6) !== 'GPTSearch';
     return (
         <>
-            <Header/>
+            <Header showSearch={showSearch}/>
             <Outlet/>
         </>
     )

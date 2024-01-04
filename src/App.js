@@ -10,6 +10,9 @@ import Movies from "./components/Movies";
 import TVShows from "./components/TVShows";
 import MyList from "./components/MyList";
 import Genre from "./components/Genre";
+import GPTSearchPage from "./components/GPTSearchPage";
+import MyAccount from "./components/MyAccount";
+import Explore from "./components/Explore";
 
 function App() {
 
@@ -27,6 +30,10 @@ function App() {
           element: <Browse/>
         },
         {
+          path: 'GPTSearch',
+          element: <GPTSearchPage/>
+        },
+        {
           path: 'movies',
           element: <Movies/>
         },
@@ -41,6 +48,14 @@ function App() {
         {
           path: 'genre',
           element: <Genre/>
+        },
+        {
+          path: 'account',
+          element: <MyAccount/>
+        },
+        {
+          path: 'explore',
+          element: <Explore/>
         },
         // {
         //   path: 'moviePage',

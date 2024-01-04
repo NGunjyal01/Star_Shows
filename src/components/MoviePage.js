@@ -6,7 +6,7 @@ import MainMovieDetails from "./MainMovieDetails";
 import MainMovieRecommendations from "./MainMovieRecommendations";
 
 const MoviePage = ({ onClose }) => {
-
+    
     const movie_id = useSelector(store => store.mainMovie.mainMovieId);
     //getting movie details and add them to store
     useMovieDetails(movie_id);
@@ -32,7 +32,7 @@ const MoviePage = ({ onClose }) => {
     if(!mainMovieDetails)    return null;
     return (
     <div className="fixed z-20 w-full h-full flex items-center justify-center bg-black bg-opacity-25 backdrop-blur-sm">
-        <div className="absolute mt-36 pb-32 w-10/12 md:w-[70%] h-full bg-[#181818] overflow-y-auto  rounded-lg scrollbar-hide">
+        <div className="absolute mt-14 pb-32 w-10/12 md:w-[70%] h-full bg-[#181818] overflow-y-auto  rounded-lg scrollbar-hide">
             <div>
                 <button className="absolute py-2.5 px-4 text-xl mt-4 right-2 font-medium hover:border-2 rounded-full bg-[#181818] text-white" onClick={onClose}>✕</button>
                 <div className="absolute mt-80 pl-4">

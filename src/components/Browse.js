@@ -25,15 +25,11 @@ const Browse = () => {
   };
   return (
     <div>
-      {mainMovieId &&<MoviePage onClose={handleOnClose}/>}
-      {showGPTSearch ? (
-        <GPTSearchPage />
-      ) : (
+      {mainMovieId && <MoviePage onClose={handleOnClose}/>}
         <>
           <MainContainer />
           <SecondaryContainer />
         </>
-      )}
     </div>
   );
 };
