@@ -10,7 +10,7 @@ const useAiringTodayShows =  ()=>{
     const getAiringTodayShows = async()=>{
         const data = await fetch('https://api.themoviedb.org/3/tv/airing_today', API_OPTIONS);
         const json = await data.json();
-        dispatch(addAiringToadyShows(json.results));
+        dispatch(addAiringToadyShows(json.results.reverse()));
     };
 
     useEffect(()=>{

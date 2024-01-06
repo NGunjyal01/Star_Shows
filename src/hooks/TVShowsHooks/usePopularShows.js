@@ -11,7 +11,7 @@ const usePopularShows = () => {
     const getPopularShows = async()=>{
         const data = await fetch("https://api.themoviedb.org/3/tv/popular",API_OPTIONS);
         const json = await data.json();
-        dispatch(addPopularShows(json.results));
+        dispatch(addPopularShows(json.results.reverse()));
     };
 
     useEffect(()=>{

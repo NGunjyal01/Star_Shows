@@ -7,7 +7,7 @@ import Login from "./components/Login";
 import Browse from "./components/HomePage/Browse";
 import MoviePage from "./components/MoviePage";
 import Movies from "./components/Movies";
-import TVShows from "./components/TVShows";
+import TVShows from "./components/TVShows/TVShows";
 import MyList from "./components/MyList";
 import Genre from "./components/Genre";
 import GPTSearchPage from "./components/GPTPage/GPTSearchPage";

@@ -30,11 +30,11 @@ const Browse = () => {
     dispatch(removeMainMovieDetails());
   };
   return (
-    <div>
+    <>
       {mainMovieId && <MoviePage onClose={handleOnClose}/>}
       <MainContainer />
       <SecondaryContainer />
-    </div>
+    </>
   );
 };
 
