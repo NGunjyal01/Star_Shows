@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import useMovieRecommendations from "../hooks/MovieHooks/useMovieRecommendations"
-import useSimilarMovies from "../hooks/MovieHooks/useSimilarMovies";
-import MovieList from "./HomePage/MovieList";
+import useMovieRecommendations from "../../hooks/MovieHooks/useMovieRecommendations"
+import useSimilarMovies from "../../hooks/MovieHooks/useSimilarMovies";
+import MovieList from "../HomePage/MovieList";
 
 
 const MainMovieRecommendations = ({ movie_id }) => {

@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import useMainMovieCast from "../hooks/MovieHooks/useMainMovieCast";
+import useMainMovieCast from "../../hooks/MovieHooks/useMainMovieCast";
 
 
 const MainMovieDetails = () => {

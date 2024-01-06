@@ -1,6 +1,6 @@
 import { useEffect,useRef,useState } from "react";
 import { auth } from "../utils/firebase";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate,NavLink } from "react-router-dom";
 import { signOut, onAuthStateChanged } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../utils/Slices/userSlice";
@@ -28,6 +28,10 @@ const Header = ({showSearch}) => {
   const handleSearch = () =>{
     dispatch(addSearchInput(searchInput));
     navigate("/body/explore");
+  };
+
+  const handleMenuClick = () =>{
+    setIsOpen(false);
   };
 
   useEffect(() => {
@@ -58,12 +62,12 @@ const Header = ({showSearch}) => {
         <div className="grid grid-cols-12 w-full items-center">
           <h1 className="text-xl md:text-4xl font-bold top-10 col-span-4 md:col-span-2 hover:text-[#00ADB5]">L O G O</h1>
           <div className="hidden md:block col-span-4 mx-auto text-lg">
-            <Link to="/body/browse" className="px-2 hover:text-[#00ADB5]">Home</Link>
-            <Link to="/body/movies" className="px-2 hover:text-[#00ADB5]">Movies</Link>
-            <Link to="/body/tvshows" className="px-2 hover:text-[#00ADB5]">TV Shows</Link>
-            <Link to="/body/mylist" className="px-2 hover:text-[#00ADB5]">My List</Link>
-            <Link to="/body/genre" className="px-2 hover:text-[#00ADB5]">Genre</Link>
-            <Link to="/body/GPTSearch" className="px-2 hover:text-[#00ADB5]">GPT Search</Link>
+            <NavLink to="/body/browse" className={({isActive}) => `px-2 hover:text-[#00ADB5] ${isActive?"text-[#00ADB5]":""}`}>Home</NavLink>
+            <NavLink to="/body/movies" className={({isActive}) => `px-2 hover:text-[#00ADB5] ${isActive?"text-[#00ADB5]":""}`}>Movies</NavLink>
+            <NavLink to="/body/tvshows" className={({isActive}) => `px-2 hover:text-[#00ADB5] ${isActive?"text-[#00ADB5]":""}`}>TV Shows</NavLink>
+            <NavLink to="/body/mylist" className={({isActive}) => `px-2 hover:text-[#00ADB5] ${isActive?"text-[#00ADB5]":""}`}>My List</NavLink>
+            <NavLink to="/body/genre" className={({isActive}) => `px-2 hover:text-[#00ADB5] ${isActive?"text-[#00ADB5]":""}`}>Genre</NavLink>
+            <NavLink to="/body/GPTSearch" className={({isActive}) => `px-2 hover:text-[#00ADB5] ${isActive?"text-[#00ADB5]":""}`}>GPT Search</NavLink>
           </div>
           {showSearch && <div className="col-span-8 md:col-span-6 mx-auto w-1/2 flex items-center" onClick={handleSearch}>
             <input type="text" placeholder="Search" className="w-full md:p-4 md:pl-1 pl-1 p-2 text-black h-6 rounded-md" onChange={(e)=>{setSearchInput(e.target.value)}}/>
@@ -86,7 +90,13 @@ const Header = ({showSearch}) => {
           </div>
           {isOpen && <div className="absolute right-10 bg-[#EEEEEE] bg-opacity-60 top-14 text-black">
               <ul className="transition-all duration-300 ease-in-out items-center"> 
-                <li className="px-4 py-2 w-full hover:bg-[#00ADB5]"><Link to="/body/account" onClick={()=>{setIsOpen(false)}}> My Account</Link></li>
+                <li className="px-4 py-2 w-full hover:bg-[#00ADB5]"><NavLink to="/body/account" className={({isActive}) => `${isActive?"text-white":""}`} onClick={handleMenuClick}> My Account</NavLink></li>
+                <li className="block sm:hidden px-4 py-2 w-full hover:bg-[#00ADB5]"><NavLink to="/body/browse" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`} onClick={handleMenuClick}>Home</NavLink></li>
+                <li className="block sm:hidden px-4 py-2 w-full hover:bg-[#00ADB5]"><NavLink to="/body/movies" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`} onClick={handleMenuClick}>Movies</NavLink></li>
+                <li className="block sm:hidden px-4 py-2 w-full hover:bg-[#00ADB5]"><NavLink to="/body/tvshows" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`}onClick={handleMenuClick} >TV Shows</NavLink></li>
+                <li className="block sm:hidden px-4 py-2 w-full hover:bg-[#00ADB5]"><NavLink to="/body/mylist" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`}onClick={handleMenuClick} >My List</NavLink></li>
+                <li className="block sm:hidden px-4 py-2 w-full hover:bg-[#00ADB5]"><NavLink to="/body/genre" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`}onClick={handleMenuClick} >Genre</NavLink></li>
+                <li className="block sm:hidden px-4 py-2 w-full hover:bg-[#00ADB5]"><NavLink to="/body/GPTSearch" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`}onClick={handleMenuClick} >GPT Search</NavLink></li>
                 <li className="px-4 py-2 w-full hover:bg-[#00ADB5]"><button onClick={handleSignOut}> Sign Out </button> </li>
               </ul>
             </div>

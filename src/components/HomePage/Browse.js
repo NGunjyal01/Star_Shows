@@ -6,7 +6,6 @@ import useAiringTodayShows from "../../hooks/TVShowsHooks/useAiringTodayShows";
 import MainContainer from "./MainContainer";
 import SecondaryContainer from "./SecondaryContainer";
 import { useDispatch, useSelector } from "react-redux";
-import MoviePage from "../MoviePage";
 import { removeMainMovieDetails, removeMainMovieId } from "../../utils/Slices/mainMovieSlice";
 import useOnTheAirShows from "../../hooks/TVShowsHooks/useOnTheAirShows";
 import usePopularShows from "../../hooks/TVShowsHooks/usePopularShows";
@@ -31,7 +30,6 @@ const Browse = () => {
   };
   return (
     <>
-      {mainMovieId && <MoviePage onClose={handleOnClose}/>}
       <MainContainer />
       <SecondaryContainer />
     </>

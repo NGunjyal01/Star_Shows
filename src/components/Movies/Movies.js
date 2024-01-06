@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
-import MovieList from './HomePage/MovieList'
-import MainContainer from './HomePage/MainContainer';
+import MovieList from '../HomePage/MovieList'
+import MainContainer from '../HomePage/MainContainer';
 
 const Movies = () => {
 

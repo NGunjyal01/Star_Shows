@@ -17,7 +17,7 @@ const MovieList = ({title,movies}) => {
         <div className="px-6 text-white">
             <h1 className="py-2 px-2 text-xl md:text-3xl">{title}</h1>
             <div className="flex items-center">
-                <FaAngleLeft className="absolute z-10 md:left-12 hover:opacity-60" onClick={slideLeft} size={30}/>
+                <FaAngleLeft className="absolute z-10 left-5 md:left-12 hover:opacity-60" onClick={slideLeft} size={30}/>
                 <div id={title} className="flex overflow-x-scroll scrollbar-hide scroll-smooth whitespace-nowrap">
                     <div className="flex">
                         {movies.map( movie => <MovieCard key={movie.id} posterPath={movie.poster_path} movie_id={movie.id}/> )}   

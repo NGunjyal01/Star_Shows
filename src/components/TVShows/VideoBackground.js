@@ -1,4 +1,3 @@
-import useMovieTrailer from "../../hooks/MovieHooks/useMovieTrailer";
 import { useSelector } from "react-redux";
 import useTVShowTrailer from "../../hooks/TVShowsHooks/useTVShowTrailer";
 
