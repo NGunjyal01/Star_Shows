@@ -4,7 +4,7 @@ import {checkValidData} from "../utils/validate"
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import {auth} from "../utils/firebase"
 import { useDispatch } from "react-redux";
-import { addUser } from "../utils/userSlice";
+import { addUser } from "../utils/Slices/userSlice";
 import { BG_URL, USER_AVATAR } from "../utils/constants";
 import { Outlet } from "react-router-dom";
 

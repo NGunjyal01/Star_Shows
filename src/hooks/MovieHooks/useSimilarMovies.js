@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
-import { API_OPTIONS } from '../utils/constants';
+import { API_OPTIONS } from '../../utils/constants';
 import { useDispatch } from 'react-redux';
-import { addSimilarMovies } from '../utils/mainMovieSlice';
+import { addSimilarMovies } from '../../utils/Slices/mainMovieSlice';
 
 const useSimilarMovies = (movie_id) => {
 

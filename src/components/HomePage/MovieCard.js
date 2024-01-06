@@ -1,6 +1,6 @@
-import { IMG_CDN } from "../utils/constants";
+import { IMG_CDN } from "../../utils/constants";
 import { useDispatch } from "react-redux";
-import { addMainMovieId } from "../utils/mainMovieSlice";
+import { addMainMovieId } from "../../utils/Slices/mainMovieSlice";
 
 const MovieCard = ({ posterPath,movie_id }) => {
 

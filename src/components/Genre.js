@@ -1,11 +1,11 @@
-import React from 'react'
+
 
 const Genre = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+    return (
+      <div className='bg-[#222831] h-screen'>
+        
+      </div>
+    )
 }
 
 export default Genre

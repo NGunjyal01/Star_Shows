@@ -1,7 +1,7 @@
 import { useEffect } from "react";
-import { API_OPTIONS } from "../utils/constants";
+import { API_OPTIONS } from "../../utils/constants";
 import { useDispatch, useSelector } from "react-redux";
-import { addmainMovieCast } from "../utils/mainMovieSlice";
+import { addmainMovieCast } from "../../utils/Slices/mainMovieSlice";
 
 
 const useMainMovieCast = () => {

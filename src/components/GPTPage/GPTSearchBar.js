@@ -1,9 +1,9 @@
 import { useDispatch, useSelector } from "react-redux"
-import lang from "../utils/languageConstants"
+import lang from "../../utils/languageConstants"
 import { useRef } from "react";
-import openai from "../utils/openai";
-import { API_OPTIONS } from "../utils/constants";
-import { addGPTMoviesResult } from "../utils/GPTSlice";
+import openai from "../../utils/openai";
+import { API_OPTIONS } from "../../utils/constants";
+import { addGPTMoviesResult } from "../../utils/Slices/GPTSlice";
 
 const GPTSearchBar = () => {
 
@@ -16,7 +16,7 @@ const GPTSearchBar = () => {
         const json = await data.json();
         return json.results;
     };
-
+    
     const handleGPTSearch = async()=>{
         console.log(searchText.current.value);
         //make an api call to get gpt api

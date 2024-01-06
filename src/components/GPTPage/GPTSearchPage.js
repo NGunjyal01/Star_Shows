@@ -1,9 +1,8 @@
 import React from 'react'
 import GPTSearchBar from './GPTSearchBar'
-import { BG_URL } from '../utils/constants'
 import GPTMovieSuggestions from './GPTMovieSuggestions'
-import { changeLanguage } from "../utils/configSlice";
-import { SUPPORTED_LANG } from "../utils/constants";
+import { changeLanguage } from "../../utils/Slices/configSlice";
+import { SUPPORTED_LANG } from '../../utils/constants';
 import { useDispatch } from 'react-redux';
 
 const GPTSearchPage = () => {

@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
-import { API_OPTIONS } from '../utils/constants';
+import { API_OPTIONS } from '../../utils/constants';
 import { useDispatch } from 'react-redux';
-import { addMovieRecommendations } from '../utils/mainMovieSlice';
+import { addMovieRecommendations } from '../../utils/Slices/mainMovieSlice';
 
 const useMovieRecommendations = (movie_id) => {
 

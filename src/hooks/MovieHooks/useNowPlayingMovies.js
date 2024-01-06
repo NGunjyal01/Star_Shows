@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { API_OPTIONS } from "../utils/constants";
-import { addNowPlayingMovies } from "../utils/moviesSlice";
+import { API_OPTIONS } from "../../utils/constants";
+import { addNowPlayingMovies } from "../../utils/Slices/moviesSlice";
 
 const useNowPlayingMovies = ()=>{
     //fetch data from tmdb api and update store

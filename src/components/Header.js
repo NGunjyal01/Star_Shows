@@ -3,10 +3,10 @@ import { auth } from "../utils/firebase";
 import { Link, useNavigate } from "react-router-dom";
 import { signOut, onAuthStateChanged } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
-import { addUser, removeUser } from "../utils/userSlice";
+import { addUser, removeUser } from "../utils/Slices/userSlice";
 import { PiUserListFill } from "react-icons/pi";
 import { FaSearch } from "react-icons/fa";
-import { addSearchInput } from "../utils/mainMovieSlice";
+import { addSearchInput } from "../utils/Slices/mainMovieSlice";
 
 const Header = ({showSearch}) => {
   const navigate = useNavigate();
@@ -53,7 +53,7 @@ const Header = ({showSearch}) => {
   }, []);
 
   return (
-    <div className="fixed z-20 w-full px-8 py-4 text-[#EEEEEE] bg-gradient-to-b from-black">
+    <div className="fixed z-20 w-full px-8 py-4 text-[#EEEEEE]">
       {user && (
         <div className="grid grid-cols-12 w-full items-center">
           <h1 className="text-xl md:text-4xl font-bold top-10 col-span-4 md:col-span-2 hover:text-[#00ADB5]">L O G O</h1>

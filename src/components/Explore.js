@@ -1,7 +1,7 @@
 import { API_OPTIONS } from "../utils/constants";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import MovieCard from "./MovieCard";
+import MovieCard from "./HomePage/MovieCard";
 
 const Explore = () => {
 
@@ -13,14 +13,14 @@ const Explore = () => {
     const [movies,setMovies] = useState(null)
     const searchInput = useSelector(store => store.mainMovie.searchInput);
     console.log(searchInput);   
-    
+
     useEffect(()=>{
         const promise = searchMovie(searchInput).then((result)=> setMovies(result));
     },[searchInput]);
     console.log(movies);
 
     return !movies? null: (
-    <div className='bg-[#141414] h-screen'>
+    <div className='bg-[#222831] h-screen'>
         <div className="pt-20 pl-10">
             <div className="flex flex-wrap">
                 {movies.map( movie => <MovieCard key={movie.id} posterPath={movie.poster_path} movie_id={movie.id}/>)}   
