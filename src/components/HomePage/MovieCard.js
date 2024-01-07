@@ -1,12 +1,15 @@
 import { IMG_CDN } from "../../utils/constants";
 import { useDispatch } from "react-redux";
 import { addMainMovieId } from "../../utils/Slices/mainMovieSlice";
+import { useNavigate } from "react-router-dom";
 
 const MovieCard = ({ posterPath,movie_id }) => {
 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const handleMovieCardClick = (movie_id)=>{
-        dispatch(addMainMovieId(movie_id));
+        const path = '/body/movies/'+movie_id;
+        navigate(path);
     }
 
     return (

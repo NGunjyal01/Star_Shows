@@ -69,35 +69,35 @@ const Header = ({showSearch}) => {
             <NavLink to="/body/genre" className={({isActive}) => `px-2 hover:text-[#00ADB5] ${isActive?"text-[#00ADB5]":""}`}>Genre</NavLink>
             <NavLink to="/body/GPTSearch" className={({isActive}) => `px-2 hover:text-[#00ADB5] ${isActive?"text-[#00ADB5]":""}`}>GPT Search</NavLink>
           </div>
-          {showSearch && <div className="col-span-8 md:col-span-6 mx-auto w-1/2 flex items-center" onClick={handleSearch}>
+          {showSearch && <div className="col-span-8 md:col-span-6 mx-auto w-2/3 md:w-1/2 flex items-center" onClick={handleSearch}>
             <input type="text" placeholder="Search" className="w-full md:p-4 md:pl-1 pl-1 p-2 text-black h-6 rounded-md" onChange={(e)=>{setSearchInput(e.target.value)}}/>
             <div className="ml-2">
               <span class="changecolor"> 
                 <FaSearch onmouseover={({ target }) => (target.style.color = "#00ADB5")}
-                  onmouseout={({ target }) => (target.style.color = "#EEEEEE")} size={25} className="" onClick={handleSearch}/>
+                  onmouseout={({ target }) => (target.style.color = "#EEEEEE")} className="SearchIcon" onClick={handleSearch}/>
                </span>
             </div>
             {/* <button className="mx-2 hover:text-[#00ADB5]">Search</button> */}
           </div>}
           <div className="absolute right-5 md:right-10">
             <span class="changecolor"> 
-              <PiUserListFill size={40}
+              <PiUserListFill className="UserIcon"
                 onmouseover={({ target }) => (target.style.color = "#00ADB5")}
                 onmouseout={({ target }) => (target.style.color = "#EEEEEE")}
                 onClick={() => {setIsOpen(!isOpen)}}
               />
             </span>
           </div>
-          {isOpen && <div className="absolute right-10 bg-[#EEEEEE] bg-opacity-60 top-14 text-black">
+          {isOpen && <div className="absolute right-5 md:right-10 top-12 md:top-14 bg-[#EEEEEE] bg-opacity-60 text-black rounded-md">
               <ul className="transition-all duration-300 ease-in-out items-center"> 
-                <li className="px-4 py-2 w-full hover:bg-[#00ADB5]"><NavLink to="/body/account" className={({isActive}) => `${isActive?"text-white":""}`} onClick={handleMenuClick}> My Account</NavLink></li>
+                <li className="px-4 py-2 w-full hover:bg-[#00ADB5] hover:rounded-t-md"><NavLink to="/body/account" className={({isActive}) => `${isActive?"text-white":""}`} onClick={handleMenuClick}> My Account</NavLink></li>
                 <li className="block sm:hidden px-4 py-2 w-full hover:bg-[#00ADB5]"><NavLink to="/body/browse" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`} onClick={handleMenuClick}>Home</NavLink></li>
                 <li className="block sm:hidden px-4 py-2 w-full hover:bg-[#00ADB5]"><NavLink to="/body/movies" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`} onClick={handleMenuClick}>Movies</NavLink></li>
                 <li className="block sm:hidden px-4 py-2 w-full hover:bg-[#00ADB5]"><NavLink to="/body/tvshows" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`}onClick={handleMenuClick} >TV Shows</NavLink></li>
                 <li className="block sm:hidden px-4 py-2 w-full hover:bg-[#00ADB5]"><NavLink to="/body/mylist" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`}onClick={handleMenuClick} >My List</NavLink></li>
                 <li className="block sm:hidden px-4 py-2 w-full hover:bg-[#00ADB5]"><NavLink to="/body/genre" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`}onClick={handleMenuClick} >Genre</NavLink></li>
                 <li className="block sm:hidden px-4 py-2 w-full hover:bg-[#00ADB5]"><NavLink to="/body/GPTSearch" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`}onClick={handleMenuClick} >GPT Search</NavLink></li>
-                <li className="px-4 py-2 w-full hover:bg-[#00ADB5]"><button onClick={handleSignOut}> Sign Out </button> </li>
+                <li className="px-4 py-2 w-full hover:bg-[#00ADB5] hover:rounded-b-md"><button onClick={handleSignOut}> Sign Out </button> </li>
               </ul>
             </div>
           }

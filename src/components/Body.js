@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from './Header'
-import { Outlet, useLocation } from 'react-router-dom'
+import { Outlet, ScrollRestoration, useLocation } from 'react-router-dom'
 
 const Body = () => {
 
@@ -10,6 +10,7 @@ const Body = () => {
         <>
             <Header showSearch={showSearch}/>
             <Outlet/>
+            <ScrollRestoration/>
         </>
     )
 }
