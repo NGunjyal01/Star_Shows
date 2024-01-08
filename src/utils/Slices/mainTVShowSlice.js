@@ -7,6 +7,8 @@ const mainTVShowSlice = createSlice({
         mainTVShowDetails: null,
         mainTVShowCast: null,
         mainTVShowSeasonDetails: null,
+        similarTVShows: null,
+        tvShowRecommendations: null,
     },
     reducers: {
         addMainTVShowTrailer: (state,action)=>{
@@ -21,9 +23,15 @@ const mainTVShowSlice = createSlice({
         addMainTVShowSeasonDetails: (state,action)=>{
             state.mainTVShowSeasonDetails = action.payload;
         },
+        addSimilarTVShows: (state,action)=>{
+            state.similarTVShows = action.payload;
+        },
+        addTVShowRecommendations: (state,action)=>{
+            state.tvShowRecommendations = action.payload;
+        },
     },
 });
 
-export const { addMainTVShowTrailer,addMainTVShowDetails,addMainTVShowCast,addMainTVShowSeasonDetails } = mainTVShowSlice.actions;
+export const { addMainTVShowTrailer,addMainTVShowDetails,addMainTVShowCast,addMainTVShowSeasonDetails,addSimilarTVShows,addTVShowRecommendations } = mainTVShowSlice.actions;
 
 export default mainTVShowSlice.reducer;

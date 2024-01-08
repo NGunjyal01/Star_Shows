@@ -21,7 +21,7 @@ const TVShowList = ({title,tvShows}) => {
                 <FaAngleLeft className="hidden sm:block absolute z-10 left-5 md:left-12 hover:opacity-60" onClick={slideLeft} size={30}/>
                 <div id={title} className="flex overflow-x-scroll scrollbar-hide scroll-smooth whitespace-nowrap">
                     <div className="flex">
-                        {tvShows.map( tvShow => <Link key={tvShow.id} to={`/body/tvshows/${tvShow.id}`}><TVShowCard posterPath={tvShow.poster_path} tvShow_id={tvShow.id}/></Link> )}   
+                        {tvShows.map(tvShow => <Link key={tvShow.id} to={`/body/tvshows/${tvShow.id}`}><TVShowCard posterPath={tvShow.poster_path} tvShow_id={tvShow.id}/></Link> )}   
                     </div>    
                 </div>
                 <FaAngleRight className="hidden sm:block absolute right-0 hover:opacity-60" onClick={slideRight} size={30}/>

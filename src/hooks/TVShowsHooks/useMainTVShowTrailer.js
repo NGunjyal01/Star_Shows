@@ -17,7 +17,7 @@ const useMainTVShowTrailer = (tvShow_id) => {
 
     useEffect(()=>{
         getMainTVShowTrailer();
-    },[])
+    },[tvShow_id])
 }
 
 export default useMainTVShowTrailer;
