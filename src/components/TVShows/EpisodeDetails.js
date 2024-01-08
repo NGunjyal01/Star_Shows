@@ -9,7 +9,7 @@ const EpisodeDetails = ({episode}) => {
             <img src={IMG_CDN + still_path} alt="Episode Logo" className="w-40 sm:w-80 sm:rounded-lg rounded-md"/>
             <div className="ml-4 my-auto">
                 <h1 className="sm:text-xl font-bold">{name}</h1>
-                <div className="flex sm:mt-2 sm:text-base text-xs">
+                <div className="flex sm:mt-2 sm:text-base text-sm w-full">
                     <h1>{"S"+season_number+" "+"E"+episode_number}</h1>
                     <h1 className="sm:ml-2 sm:mr-2 ml-1 mr-1">{"|"}</h1>
                     <h1>{air_date}</h1>
