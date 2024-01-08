@@ -11,15 +11,15 @@ const EpisodeDetails = ({episode}) => {
                 <h1 className="sm:text-xl font-bold">{name}</h1>
                 <div className="flex sm:mt-2 sm:text-base text-sm">
                     <h1>{"S"+season_number+" "+"E"+episode_number}</h1>
-                    <h1 className="ml-2 mr-2">{"|"}</h1>
+                    <h1 className="sm:ml-2 sm:mr-2 ml-1 mr-1">{"|"}</h1>
                     <h1>{air_date}</h1>
-                    <h1 className="ml-2 mr-2">{"|"}</h1>
+                    <h1 className="sm:ml-2 sm:mr-2 ml-1 mr-1">{"|"}</h1>
                     <h1>{runtime + " min"}</h1>
                 </div>
                 <p className="mt-2 hidden sm:block">{overview}</p>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default EpisodeDetails;
