@@ -15,7 +15,7 @@ const useMovieRecommendations = (movie_id) => {
 
     useEffect(()=>{
         getMovieRecommendations();
-    },[]);
+    },[movie_id]);
 }
 
 export default useMovieRecommendations;

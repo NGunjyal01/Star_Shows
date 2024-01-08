@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { API_OPTIONS } from "../../utils/constants";
 import { useEffect } from "react";
 import { addMainMovieDetails } from "../../utils/Slices/mainMovieSlice";
@@ -14,8 +14,8 @@ const useMovieDetails = (movie_id) => {
 
     useEffect(()=>{
         getMovieDetails();
-    },[]);
+    },[movie_id]);
     
 };
 
-export default useMovieDetails
+export default useMovieDetails;

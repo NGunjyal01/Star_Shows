@@ -5,6 +5,7 @@ import GPTReducer from "./Slices/GPTSlice";
 import configReducer from "./Slices/configSlice";
 import mainMovieReducer from "./Slices/mainMovieSlice";
 import TVShowsReducer from "./Slices/TVShowsSlice";
+import mainTVShowReducer from "./Slices/mainTVShowSlice";
 
 const appStore = configureStore({
     reducer:{
@@ -14,6 +15,7 @@ const appStore = configureStore({
         config: configReducer,
         mainMovie: mainMovieReducer,
         tvShows: TVShowsReducer,
+        mainTVShow: mainTVShowReducer,
     },
 });
 

@@ -1,4 +1,5 @@
-import MovieList from './MovieList';
+import MovieList from '../Common Features/MovieList';
+import TVShowList from '../Common Features/TVShowList';
 import { useSelector } from 'react-redux';
 
 const SecondaryContainer = () => {
@@ -13,10 +14,10 @@ const SecondaryContainer = () => {
                 <MovieList title={"Top Rated Movies"} movies={movies.topRatedMovies} /> 
                 <MovieList title={"Popular Movies"} movies={movies.popularMovies} /> 
                 <MovieList title={"Upcoming Movies"} movies={movies.upComingMovies} />
-                <MovieList title={"Airing Today Shows"} movies={tvShows.airingTodayShows} />
-                <MovieList title={"On The Air Shows"} movies={tvShows.onTheAirShows} />
-                <MovieList title={"Popular Shows"} movies={tvShows.popularShows} />
-                <MovieList title={"Top Rated Shows"} movies={tvShows.topRatedShows} />   
+                <TVShowList title={"Airing Today Shows"} tvShows={tvShows.airingTodayShows} />
+                <TVShowList title={"On The Air Shows"} tvShows={tvShows.onTheAirShows} />
+                <TVShowList title={"Popular Shows"} tvShows={tvShows.popularShows} />
+                <TVShowList title={"Top Rated Shows"} tvShows={tvShows.topRatedShows} />   
             </div>
         </div>
     )

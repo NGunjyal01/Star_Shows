@@ -1,9 +1,9 @@
-import Body from "./components/Body"
 import './App.css';
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import { createBrowserRouter,createRoutesFromElements,RouterProvider,Route } from 'react-router-dom'
 import Login from "./components/Login";
+import Body from "./components/Body"
 import Browse from "./components/HomePage/Browse";
 import MoviePage from "./components/Movies/MoviePage";
 import Movies from "./components/Movies/Movies";
@@ -13,6 +13,7 @@ import Genre from "./components/Genre";
 import GPTSearchPage from "./components/GPTPage/GPTSearchPage";
 import MyAccount from "./components/MyAccount";
 import Explore from "./components/Explore";
+import TVShowPage from "./components/TVShows/TVShowPage";
 
 function App() {
 
@@ -75,6 +76,7 @@ function App() {
           <Route path="explore" element={<Explore/>}/>
           <Route path="account" element={<MyAccount/>}/>
           <Route path="movies/:movie_id" element={<MoviePage/>}/>
+          <Route path="tvshows/:tvShow_id" element={<TVShowPage/>}/>
         </Route>
       </>
     )

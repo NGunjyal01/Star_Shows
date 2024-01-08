@@ -4,9 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { addmainMovieCast } from "../../utils/Slices/mainMovieSlice";
 
 
-const useMainMovieCast = () => {
-    
-    const movie_id = useSelector(store => store.mainMovie.mainMovieId);
+const useMainMovieCast = (movie_id) => {
+
     const dispatch = useDispatch();
 
     const getMainMovieCast = async()=>{
@@ -17,7 +16,7 @@ const useMainMovieCast = () => {
 
     useEffect(()=>{
         getMainMovieCast();
-    },[]);
+    },[movie_id]);
 }
 
 export default useMainMovieCast;

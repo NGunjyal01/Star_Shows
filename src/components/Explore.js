@@ -1,7 +1,7 @@
 import { API_OPTIONS } from "../utils/constants";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import MovieCard from "./HomePage/MovieCard";
+import MovieCard from "./Common Features/MovieCard";
 
 const Explore = () => {
 

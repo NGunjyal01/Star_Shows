@@ -2,9 +2,9 @@ import { useSelector } from "react-redux";
 import useMainMovieCast from "../../hooks/MovieHooks/useMainMovieCast";
 
 
-const MainMovieDetails = () => {
+const MainMovieDetails = ({movie_id}) => {
 
-    useMainMovieCast();
+    useMainMovieCast(movie_id);
     const mainMovieDetails = useSelector(store => store.mainMovie.mainMovieDetails);
     const { release_date,runtime,overview,genres } = mainMovieDetails;
     const mainMovieCast = useSelector(store => store.mainMovie.mainMovieCast);

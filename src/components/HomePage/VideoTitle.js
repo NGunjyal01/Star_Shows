@@ -1,7 +1,7 @@
-import React from 'react'
 
 const VideoTitle = ({title,overview}) => {
-  return (
+
+  return !title? null: (
     <div className='pt-[40%] md:pt-[30%] px-14 absolute text-white -ml-9 md:m-0 md:block'>
       <h1 className='text-xl md:text-3xl font-bold md:w-auto w-full'>{title}</h1>
       <p className='hidden md:inline-block py-4 text-lg w-1/4'>{overview}</p>
@@ -13,4 +13,4 @@ const VideoTitle = ({title,overview}) => {
   )
 }
 
-export default VideoTitle
+export default VideoTitle;
