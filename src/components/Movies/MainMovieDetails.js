@@ -10,23 +10,24 @@ const MainMovieDetails = ({movie_id}) => {
     const mainMovieCast = useSelector(store => store.mainMovie.mainMovieCast);
 
     return (
-        <div className="text-white m-8">
-            <div className="flex">
-                <div className="w-[65%]">
-                    <div className="flex">
-                        <h2 className="mr-6">{release_date?.substr(0,4)}</h2>
-                        <h2>{runtime + " min"}</h2>
+        <div className="text-white sm:p-10 p-5 -mt-7 sm:mt-0">
+            <div className="grid grid-cols-12">
+                <div className="sm:col-span-8 col-span-full">
+                    <div className="flex sm:text-lg text-sm">
+                        <h1>{release_date.substr(0,4)}</h1>
+                        <h1 className="ml-2 mr-2">{"|"}</h1>
+                        <h1>{runtime+" min"}</h1>
                     </div>
-                    <p className="text-lg mt-4">{overview}</p>
+                    <p className="text-base sm:text-lg sm:mt-4 mt-3">{overview}</p>
                 </div>
-                <div className="ml-7 w-[35%]">
-                    <h2 className=""><span className="text-gray-500">Cast:</span> {mainMovieCast?.map(cast => cast.name).slice(0,7).join(", ")}</h2>
-                    <h2 className=""><span className="text-gray-500">Genre:</span> {genres?.map(genre => genre.name).join(", ")}</h2>
+                <div className="sm:ml-7 mt-3 sm:mt-0 sm:col-span-4 col-span-full">
+                    <h2><span className="text-gray-500">Cast:</span> {mainMovieCast?.map(cast => cast.name).slice(0,7).join(", ")}</h2>
+                    <h2><span className="text-gray-500">Genre:</span> {genres?.map(genre => genre.name).join(", ")}</h2>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default MainMovieDetails;
 

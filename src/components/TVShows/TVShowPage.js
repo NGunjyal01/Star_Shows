@@ -1,10 +1,9 @@
 import { useSelector } from "react-redux";
 import useTVShowDetails from "../../hooks/TVShowsHooks/useTVShowDetails";
 import MainTVShowDetails from "./MainTVShowDetails";
-// import MainTVShowRecommendations from "./MainTVShowRecommendations";
+import MainTVShowRecommendations from "./MainTVShowRecommendations";
 import { useParams } from "react-router-dom";
 import MainTVShowVideoBackground from "./MainTVShowVideoBackground";
-import VideoTitle from "./VideoTitle";
 import MainTVShowVideoTitle from "./MainTVShowVideoTitle";
 
 const TVShowPage = () => {
@@ -17,11 +16,13 @@ const TVShowPage = () => {
 
     if(!mainTVShowDetails)    return null;
     return (
-        <div className="w-full h-full bg-[#181818]">
-            <MainTVShowVideoTitle title={mainTVShowDetails.name}/>
-            <MainTVShowVideoBackground tvShow_id={tvShow_id}/>
+        <div className="w-full h-full bg-[#141414]">
+            <div className="pt-16 sm:pt-0"> 
+                <MainTVShowVideoBackground tvShow_id={tvShow_id}/>
+                <MainTVShowVideoTitle title={mainTVShowDetails.name}/>
+            </div>
             <MainTVShowDetails tvShow_id={tvShow_id}/>
-            {/* <MainTVShowRecommendations TVShow_id={TVShow_id}/> */}
+            <MainTVShowRecommendations tvShow_id={tvShow_id}/>
         </div>
     );
 };

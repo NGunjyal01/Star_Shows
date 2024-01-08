@@ -14,7 +14,7 @@ const MainContainer = () => {
             <VideoTitle title={name} overview={overview}/>
             <VideoBackground tvShow_id={id}/>
         </div>
-    )
-}
+    );
+};
 
-export default MainContainer
+export default MainContainer;

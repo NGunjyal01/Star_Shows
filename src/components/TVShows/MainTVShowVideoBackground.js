@@ -9,7 +9,7 @@ const MainTVShowVideoBackground = ({tvShow_id}) => {
 
     return (
     <div>
-        <iframe className="w-full h-screen"
+        <iframe className="w-full sm:h-screen aspect-video"
         // autoplay is added and mute 
         src={"https://www.youtube.com/embed/" + trailerVideo?.key + "?si=2Gx8dihAIbJhHsU5&autoplay=1&loop=1&mute=1"}
         title="YouTube video player"
@@ -17,6 +17,6 @@ const MainTVShowVideoBackground = ({tvShow_id}) => {
         ></iframe>
     </div>
     );
-}
+};
 
 export default MainTVShowVideoBackground;

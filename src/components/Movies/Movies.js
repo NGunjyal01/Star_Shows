@@ -9,7 +9,7 @@ const Movies = () => {
   return (
     <>
       <MainContainer/>
-      <div className='bg-[#222831] h-full'>
+      <div className='bg-[#141414] h-full'>
         <div className='pl-2 md:pl-12 pt-10 relative z-10'>
           <MovieList title={"Now Playing"} movies={movies.nowPlayingMovies} /> 
           <MovieList title={"Top Rated"} movies={movies.topRatedMovies} /> 
@@ -18,7 +18,7 @@ const Movies = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Movies
+export default Movies;

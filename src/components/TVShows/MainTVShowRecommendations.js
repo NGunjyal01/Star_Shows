@@ -11,12 +11,14 @@ const MainTVShowRecommendations = ({tvShow_id}) => {
     const similarTVShows = useSelector(store => store.mainTVShow.similarTVShows);
     const tvShowRecommendations = useSelector(store => store.mainTVShow.tvShowRecommendations);
 
+    if(!similarTVShows || !tvShowRecommendations)   return null;
+
     return (
-        <div>
-            <TVShowList title={"Similar Shows"} tvShows={similarTVShows}/>
-            <TVShowList title={"Recommendations"} tvShows={tvShowRecommendations}/>
+        <div className="-ml-8 sm:-ml-0 mt-4">
+            {!similarTVShows.length ? null : <TVShowList title={"Similar Shows"} tvShows={similarTVShows}/>}
+            {!tvShowRecommendations.length ? null : <TVShowList title={"Recommendations"} tvShows={tvShowRecommendations}/>}
         </div>
-    )
-}
+    );
+};
 
 export default MainTVShowRecommendations;

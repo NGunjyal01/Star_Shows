@@ -1,5 +1,5 @@
 
-const MainTVShowVideoTitle = ({title}) => {
+const MainMovieVideoTitle = ({title}) => {
     return (
       <div className='top-[82%] px-14 sm:absolute text-white -ml-9 md:m-0 mt-2'>
         <h1 className='text-xl md:text-3xl font-bold md:w-auto w-full'>{title}</h1>
@@ -11,5 +11,5 @@ const MainTVShowVideoTitle = ({title}) => {
     );
 };
   
-export default MainTVShowVideoTitle;
+export default MainMovieVideoTitle;
   

@@ -9,7 +9,7 @@ const TVShows = () => {
   return (
     <>
       <MainContainer/>
-        <div className='bg-[#222831] h-full'>
+        <div className='bg-[#141414] h-full'>
         <div className='pl-2 md:pl-12 pt-10 relative z-10'>
             <TVShowList title={"Airing Today Shows"} tvShows={tvShows.airingTodayShows} />
             <TVShowList title={"On The Air Shows"} tvShows={tvShows.onTheAirShows} />
@@ -18,7 +18,7 @@ const TVShows = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default TVShows;
