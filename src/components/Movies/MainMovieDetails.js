@@ -9,12 +9,12 @@ const MainMovieDetails = ({movie_id}) => {
     const { release_date,runtime,overview,genres } = mainMovieDetails;
     const mainMovieCast = useSelector(store => store.mainMovie.mainMovieCast);
 
-    return (
+    return  (
         <div className="text-white sm:p-10 p-5 -mt-7 sm:mt-0">
             <div className="grid grid-cols-12">
                 <div className="sm:col-span-8 col-span-full">
                     <div className="flex sm:text-lg text-sm">
-                        <h1>{release_date.substr(0,4)}</h1>
+                        <h1>{release_date?.substr(0,4)}</h1>
                         <h1 className="ml-2 mr-2">{"|"}</h1>
                         <h1>{runtime+" min"}</h1>
                     </div>

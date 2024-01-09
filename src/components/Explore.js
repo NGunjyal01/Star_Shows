@@ -2,6 +2,7 @@ import { API_OPTIONS } from "../utils/constants";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import MovieCard from "./Common Features/MovieCard";
+import { Link } from "react-router-dom";
 
 const Explore = () => {
 
@@ -23,7 +24,7 @@ const Explore = () => {
     <div className='bg-[#222831] h-screen'>
         <div className="pt-20 pl-10">
             <div className="flex flex-wrap">
-                {movies.map( movie => <MovieCard key={movie.id} posterPath={movie.poster_path} movie_id={movie.id}/>)}   
+                {movies.map( movie => <Link key={movie.id} to={`/body/movies/${movie.id}`}><MovieCard posterPath={movie.poster_path} movie_id={movie.id}/></Link>)}   
             </div> 
         </div>
     </div>
