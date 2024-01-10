@@ -29,9 +29,9 @@ const Movies = () => {
       {showOptionMenu && <div className="absolute flex flex-wrap text-black mt-32 bg-white max-w-xs bg-opacity-50 z-20">
         {Movies_Genres.map(genre => <Link className="m-1.5" key={genre.value}  onClick={()=>{handleOptionClick(genre.label)}}>{genre.label}</Link>)}
       </div>} */}
-      <MainContainer />
       <div className="bg-[#141414] h-full">
-        <div className="pl-2 md:pl-12 pt-10 relative z-10">
+        <MainContainer />
+        <div className="pl-2 sm:pl-6 pt-10 relative z-10">
           <MovieList title={"Now Playing"} movies={movies.nowPlayingMovies} />
           <MovieList title={"Top Rated"} movies={movies.topRatedMovies} />
           <MovieList title={"Popular"} movies={movies.popularMovies} />

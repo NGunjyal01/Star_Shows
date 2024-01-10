@@ -58,7 +58,7 @@ const Header = () => {
     <div className={`fixed z-20 w-full px-8 py-4 text-[#EEEEEE] ${isScrolled?"bg-[#141414] transition-all duration-300":""}`}>
       {user && (
         <div className="grid grid-cols-12 w-full items-center">
-          <h1 className="text-xl md:text-4xl font-bold top-10 col-span-4 md:col-span-2 hover:text-[#00ADB5]">L O G O</h1>
+          <h1 className="text-xl md:text-4xl font-bold top-10 col-span-4 md:col-span-2 md:hover:text-[#00ADB5]">L O G O</h1>
           <TopMenu/>
           <SearchBar/>
           <SideMenu/>

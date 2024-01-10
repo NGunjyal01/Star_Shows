@@ -21,8 +21,8 @@ const MainMovieDetails = ({movie_id}) => {
                     <p className="text-base sm:text-lg sm:mt-4 mt-3">{overview}</p>
                 </div>
                 <div className="sm:ml-7 mt-3 sm:mt-0 sm:col-span-4 col-span-full">
-                    <h2><span className="text-gray-500">Cast:</span> {mainMovieCast?.map(cast => cast.name).slice(0,7).join(", ")}</h2>
-                    <h2><span className="text-gray-500">Genre:</span> {genres?.map(genre => genre.name).join(", ")}</h2>
+                    <h2 className="sm:text-base text-sm"><span className="text-gray-500">Cast:</span> {mainMovieCast?.map(cast => cast.name).slice(0,7).join(", ")}</h2>
+                    <h2 className="sm:text-base text-sm"><span className="text-gray-500">Genre:</span> {genres?.map(genre => genre.name).join(", ")}</h2>
                 </div>
             </div>
         </div>

@@ -34,14 +34,14 @@ const SideMenu = () => {
             </div>
             {isOpen && <div className="absolute right-5 md:right-10 top-12 md:top-14 bg-[#EEEEEE] bg-opacity-60 text-black rounded-md">
                 <ul className="transition-all duration-300 ease-in-out items-center"> 
-                    <li className="px-4 py-2 w-full hover:bg-[#00ADB5] hover:rounded-t-md"><NavLink to="/body/account" className={({isActive}) => `${isActive?"text-white":""}`} onClick={handleMenuClick}> My Account</NavLink></li>
-                    <li className="block sm:hidden px-4 py-2 w-full hover:bg-[#00ADB5]"><NavLink to="/body/browse" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`} onClick={handleMenuClick}>Home</NavLink></li>
-                    <li className="block sm:hidden px-4 py-2 w-full hover:bg-[#00ADB5]"><NavLink to="/body/movies" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`} onClick={handleMenuClick}>Movies</NavLink></li>
-                    <li className="block sm:hidden px-4 py-2 w-full hover:bg-[#00ADB5]"><NavLink to="/body/tvshows" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`}onClick={handleMenuClick} >TV Shows</NavLink></li>
-                    <li className="block sm:hidden px-4 py-2 w-full hover:bg-[#00ADB5]"><NavLink to="/body/mylist" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`}onClick={handleMenuClick} >My List</NavLink></li>
-                    <li className="block sm:hidden px-4 py-2 w-full hover:bg-[#00ADB5]"><NavLink to="/body/genre/28" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`}onClick={handleMenuClick} >Genre</NavLink></li>
-                    <li className="block sm:hidden px-4 py-2 w-full hover:bg-[#00ADB5]"><NavLink to="/body/GPTSearch" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`}onClick={handleMenuClick} >GPT Search</NavLink></li>
-                    <li className="px-4 py-2 w-full hover:bg-[#00ADB5] hover:rounded-b-md"><button onClick={handleSignOut}> Sign Out </button> </li>
+                    <li className="px-4 py-2 w-full md:hover:bg-[#00ADB5] md:hover:rounded-t-md"><NavLink to="/body/account" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`} onClick={handleMenuClick}> My Account</NavLink></li>
+                    <li className="block sm:hidden px-4 py-2 w-full md:hover:bg-[#00ADB5]"><NavLink to="/body/browse" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`} onClick={handleMenuClick}>Home</NavLink></li>
+                    <li className="block sm:hidden px-4 py-2 w-full md:hover:bg-[#00ADB5]"><NavLink to="/body/movies" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`} onClick={handleMenuClick}>Movies</NavLink></li>
+                    <li className="block sm:hidden px-4 py-2 w-full md:hover:bg-[#00ADB5]"><NavLink to="/body/tvshows" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`}onClick={handleMenuClick} >TV Shows</NavLink></li>
+                    <li className="block sm:hidden px-4 py-2 w-full md:hover:bg-[#00ADB5]"><NavLink to="/body/mylist" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`}onClick={handleMenuClick} >My List</NavLink></li>
+                    <li className="block sm:hidden px-4 py-2 w-full md:hover:bg-[#00ADB5]"><NavLink to="/body/genre/35" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`}onClick={handleMenuClick} >Genre</NavLink></li>
+                    <li className="block sm:hidden px-4 py-2 w-full md:hover:bg-[#00ADB5]"><NavLink to="/body/GPTSearch" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`}onClick={handleMenuClick} >GPT Search</NavLink></li>
+                    <li className="px-4 py-2 w-full md:hover:bg-[#00ADB5] md:hover:rounded-b-md"><button onClick={handleSignOut}> Sign Out </button> </li>
                 </ul>
             </div>}
         </>

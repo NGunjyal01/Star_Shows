@@ -6,7 +6,7 @@ const EpisodeDetails = ({episode}) => {
 
     return (
         <div className="flex sm:mt-5 mt-3 ml-0">
-            <img src={IMG_CDN + still_path} alt="Episode Logo" className="w-40 sm:w-80 sm:rounded-lg rounded-md"/>
+            <img src={IMG_CDN + still_path} alt="Episode Logo" className="w-40 sm:w-80 sm:rounded-lg rounded-md z-0"/>
             <div className="ml-2.5 sm:ml-4 my-auto">
                 <h1 className="sm:text-xl font-bold">{name}</h1>
                 <div className="flex sm:mt-2">

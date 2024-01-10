@@ -5,7 +5,6 @@ const configSlice = createSlice({
     initialState: {
         lang: "en",
         showSearchBar: null,
-        showGenreOptions: null,
     },
     reducers: {
         changeLanguage: (state,action) =>{
@@ -14,12 +13,9 @@ const configSlice = createSlice({
         toggleShowSearchBar: (state,action) =>{
             state.showSearchBar = action.payload;
         },
-        toggleShowGenreOptions: (state,action) =>{
-            state.showGenreOptions = action.payload;
-        },
     },
 });
 
-export const { changeLanguage,toggleShowSearchBar,toggleShowGenreOptions } = configSlice.actions;
+export const { changeLanguage,toggleShowSearchBar } = configSlice.actions;
 
 export default configSlice.reducer;
