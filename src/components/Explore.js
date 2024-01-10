@@ -1,8 +1,6 @@
 import { API_OPTIONS } from "../utils/constants";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import MovieCard from "./Common Features/MovieCard";
-import { Link } from "react-router-dom";
 import MovieList from "./Common Features/MovieList";
 import TVShowList from "./Common Features/TVShowList";
 
@@ -23,23 +21,20 @@ const Explore = () => {
     const [tvShows,setTVShows] = useState(null);
 
     const searchInput = useSelector(store => store.mainMovie.searchInput);
-    console.log(searchInput);   
 
     useEffect(()=>{
-        const MoviesPromise = searchMovie(searchInput).then((result)=> setMovies(result));
-        const TVShowsPromise = searchTVShow(searchInput).then((result)=>setTVShows(result));
+        searchMovie(searchInput).then((result)=> setMovies(result));
+        searchTVShow(searchInput).then((result)=>setTVShows(result));
     },[searchInput]);
-    console.log(movies);
-    console.log(tvShows);
 
     return (!movies || !tvShows)? null: (
     <div className='bg-[#141414] h-screen'>
-        <div className="pt-32 pl-10">
+        <div className="pt-20 sm:pt-32 sm:pl-10">
             {movies.length?<MovieList title={"Movies"} movies={movies}/>:null}
             {tvShows.length?<TVShowList title={"TVShows"} tvShows={tvShows}/>:null}
         </div>
     </div>
-    )
-}
+    );
+};
 
 export default Explore;
