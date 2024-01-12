@@ -67,7 +67,7 @@ function App() {
     createRoutesFromElements(
       <>
         <Route path="/" element={<Body/>}>
-          <Route path="/" element={<Login/>}/>
+          <Route path="" element={<Login/>}/>
           <Route path="browse" element={<Browse/>}/>
           <Route path="movies" element={<Movies/>}/>
           <Route path="tvshows" element={<TVShows/>}/>
