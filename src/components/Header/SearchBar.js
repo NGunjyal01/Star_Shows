@@ -14,7 +14,7 @@ const SearchBar = () => {
 
     const handleSearch = () =>{
         dispatch(addSearchInput(searchInput));
-        navigate("/body/explore");
+        navigate("/explore");
     };
 
     const handleSearchChange = (value) =>{

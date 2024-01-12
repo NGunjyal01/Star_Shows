@@ -1,5 +1,5 @@
 import { NavLink, Outlet } from "react-router-dom"
-import { Movies_Genres, TVShows_Genres,Genres } from "../../utils/constants"
+import { Genres } from "../../utils/constants"
 import { useState ,useEffect} from "react";
 import { FaChevronDown } from "react-icons/fa";
 
@@ -47,7 +47,7 @@ const Genre = () => {
       </div>
       <Outlet/>
     </div>
-  )
-}
+  );
+};
 
 export default Genre;

@@ -1,4 +1,4 @@
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
 import VideoTitle from './VideoTitle';
 import VideoBackground from './VideoBackground';
 
@@ -13,7 +13,7 @@ const MainContainer = () => {
         <VideoTitle title={original_title} overview={overview} movie_id={id}/>
         <VideoBackground movie_id={id}/>
     </div>
-    )
+    );
 };
 
 export default MainContainer;

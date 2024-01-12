@@ -34,17 +34,18 @@ const Header = () => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      if (user) {
-        const { uid, email, displayName, photoURL } = user;
+      if(user) {
+        const { uid, email, displayName, phoneNumber, photoURL } = user;
         dispatch(
           addUser({
             uid: uid,
             email: email,
             displayName: displayName,
+            phoneNumber: phoneNumber,
             photoURL: photoURL,
           })
         );
-        navigate("/body/browse");
+        navigate("/browse");
       } else {
         // User is signed out
         dispatch(removeUser());

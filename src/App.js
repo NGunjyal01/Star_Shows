@@ -2,7 +2,7 @@ import './App.css';
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import { createBrowserRouter,createRoutesFromElements,RouterProvider,Route } from 'react-router-dom'
-import Login from "./components/Login";
+import Login from "./components/Login/Login";
 import Body from "./components/Body"
 import Browse from "./components/HomePage/Browse";
 import MoviePage from "./components/Movies/MoviePage";
@@ -66,8 +66,8 @@ function App() {
   const appRouter = createBrowserRouter(
     createRoutesFromElements(
       <>
-        <Route path="/" element={<Login/>}/>
-        <Route path="/body" element={<Body/>}>
+        <Route path="/" element={<Body/>}>
+          <Route path="/" element={<Login/>}/>
           <Route path="browse" element={<Browse/>}/>
           <Route path="movies" element={<Movies/>}/>
           <Route path="tvshows" element={<TVShows/>}/>

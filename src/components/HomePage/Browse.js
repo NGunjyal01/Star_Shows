@@ -5,8 +5,6 @@ import useUpComingMovies from "../../hooks/MovieHooks/useUpComingMovies";
 import useAiringTodayShows from "../../hooks/TVShowsHooks/useAiringTodayShows";
 import MainContainer from "./MainContainer";
 import SecondaryContainer from "./SecondaryContainer";
-import { useDispatch, useSelector } from "react-redux";
-import { removeMainMovieDetails, removeMainMovieId } from "../../utils/Slices/mainMovieSlice";
 import useOnTheAirShows from "../../hooks/TVShowsHooks/useOnTheAirShows";
 import usePopularShows from "../../hooks/TVShowsHooks/usePopularShows";
 import useTopRatedShows from "../../hooks/TVShowsHooks/useTopRatedShows";
@@ -22,12 +20,7 @@ const Browse = () => {
   useOnTheAirShows();
   usePopularShows();
   useTopRatedShows();
-  const mainMovieId = useSelector(store => store.mainMovie.mainMovieId);
-  const dispatch = useDispatch();
-  const handleOnClose = () =>{
-    dispatch(removeMainMovieId());
-    dispatch(removeMainMovieDetails());
-  };
+
   return (
     <>
       <MainContainer />

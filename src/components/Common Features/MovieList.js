@@ -21,7 +21,7 @@ const MovieList = ({title,movies}) => {
                 <FaAngleLeft className="hidden sm:block absolute z-10 left-8 md:hover:opacity-60" onClick={slideLeft} size={30}/>
                 <div id={title} className="flex overflow-x-scroll scrollbar-hide scroll-smooth whitespace-nowrap">
                     <div className="flex">
-                        {movies.map( movie => <Link key={movie.id} to={`/body/movies/${movie.id}`}><MovieCard posterPath={movie.poster_path} movie_id={movie.id}/></Link> )}   
+                        {movies.map( movie => <Link key={movie.id} to={`/movies/${movie.id}`}><MovieCard posterPath={movie.poster_path} movie_id={movie.id}/></Link> )}   
                     </div>    
                 </div>
                 <FaAngleRight className="hidden sm:block absolute right-2 md:hover:opacity-60" onClick={slideRight} size={30}/>
