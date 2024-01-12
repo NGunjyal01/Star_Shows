@@ -19,12 +19,12 @@ const EmailAndPasswordSignIn = () => {
 
     const handleButtonClick = ()=>{
         //validate the form data
-        const message = checkValidData(email.current.value,password.current.value);
+        const message = checkValidData(email,password);
         setErrorMessage(message);
         if(message) return;
         if(!isSignIn){
             //Sign Up Logic
-            createUserWithEmailAndPassword(auth,email.current.value, password.current.value)
+            createUserWithEmailAndPassword(auth,email,password)
             .then((userCredential) => {
                 // Signed up 
                 const user = userCredential.user;
@@ -36,7 +36,7 @@ const EmailAndPasswordSignIn = () => {
                     dispatch(addUser({uid:uid, email:email, displayName:displayName,phoneNumber:phoneNumber, photoURL:photoURL}));
                   }).catch((error) => {
                     // An error occurred
-                    setErrorMessage(error.message);
+                    // setErrorMessage(error.message);
                   });
                 
                 // ...
@@ -44,12 +44,13 @@ const EmailAndPasswordSignIn = () => {
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                setErrorMessage(errorCode+"-----------"+errorMessage);
+                if(message==="Password is not Valid")   setErrorMessage("Password Should Contain atleast 1 uppercase");
+                else setErrorMessage(errorCode.substr(5));
                 // ..
             });
         }
         else{
-            signInWithEmailAndPassword(auth, email.current.value, password.current.value)
+            signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in 
                 const user = userCredential.user;
