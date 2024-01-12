@@ -19,9 +19,9 @@ const EmailAndPasswordSignIn = () => {
 
     const handleButtonClick = ()=>{
         //validate the form data
-        const message = checkValidData(email,password);
-        setErrorMessage(message);
-        if(message) return;
+        // const message = checkValidData(email,password);
+        // setErrorMessage(message);
+        // if(message) return;
         if(!isSignIn){
             //Sign Up Logic
             createUserWithEmailAndPassword(auth,email,password)
@@ -44,8 +44,8 @@ const EmailAndPasswordSignIn = () => {
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                if(message==="Password is not Valid")   setErrorMessage("Password Should Contain atleast 1 uppercase");
-                else setErrorMessage(errorCode.substr(5));
+                // if(message==="Password is not Valid")   setErrorMessage("Password Should Contain atleast 1 uppercase");
+                setErrorMessage(errorCode.substr(5));
                 // ..
             });
         }
@@ -59,7 +59,7 @@ const EmailAndPasswordSignIn = () => {
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                setErrorMessage(errorCode+"-"+errorMessage);
+                setErrorMessage(errorCode.substr(5));
             });
         }
     };
@@ -67,6 +67,7 @@ const EmailAndPasswordSignIn = () => {
     const handletoggleSignIn = ()=>{
         setEmail('');
         setPassword('');
+        setErrorMessage('');
         dispatch(toggleIsSignIn());
     };
     
