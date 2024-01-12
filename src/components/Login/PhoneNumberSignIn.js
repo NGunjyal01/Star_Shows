@@ -40,10 +40,10 @@ const PhoneNumberSignIn = () => {
     return (
         <>
             {/* <input type='text' placeholder='Display Name' className='p-2 my-2 w-full rounded-sm' value={name} onChange={(e)=>{setName(e.target.value)}}/> */}
-            <PhoneInput placeholder="Enter phone number" defaultCountry='IN' value={phone} onChange={setPhone} className='w-full my-2' style={{ padding: '10px' }}/>
+            <PhoneInput placeholder="Enter phone number" defaultCountry='IN' value={phone} onChange={setPhone} className='w-full my-2 text-black' style={{ padding: '10px' }}/>
             <button className="my-2 p-2 bg-[#00ADB5] w-1/2 rounded-sm text-white" onClick={sendOTP}>Send OTP</button>
             <div id='recaptcha-container' className='my-2'></div>
-            <input type='text' placeholder='Enter OTP' className='p-2 my-2 w-full rounded-sm' value={OTP} onChange={(e)=>{setOTP(e.target.value)}}/>
+            <input type='text' placeholder='Enter OTP' className='p-2 my-2 w-full rounded-sm text-black' value={OTP} onChange={(e)=>{setOTP(e.target.value)}}/>
             <button className="my-2 p-2 bg-[#00ADB5] w-1/2 rounded-sm text-white" onClick={verifyOTP}>Verify OTP</button>
          </>
     );
