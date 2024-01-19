@@ -1,0 +1,55 @@
+.changecolor {
+  color: #EEEEEE;
+}
+.changecolor:hover {
+  color: #00ADB5;
+}
+
+.SearchIcon{
+  font-size: 1.7rem;
+}
+
+.UserIcon{
+  font-size: 2.7rem;
+}
+
+.DropDownIcon{
+  font-size: 1rem;
+}
+
+.FooterIcon{
+  font-size: 2.2rem;
+}
+
+.LoginIcon{
+  font-size:2rem;
+}
+
+@media only screen and (max-width: 450px) {
+  .UserIcon {
+    font-size: 1.7rem;
+  }
+  .SearchIcon {
+    font-size: 1rem;
+  }
+  .DropDownIcon{
+    font-size: .7rem;
+  }
+  .FooterIcon{
+    font-size: 1.5rem;
+  }
+  .LoginIcon{
+    font-size: 1.7rem;
+  }
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
