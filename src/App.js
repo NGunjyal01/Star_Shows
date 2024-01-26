@@ -8,7 +8,7 @@ import Browse from "./components/HomePage/Browse";
 import MoviePage from "./components/Movies/MoviePage";
 import Movies from "./components/Movies/Movies";
 import TVShows from "./components/TVShows/TVShows";
-import MyList from "./components/MyList";
+import Watchlist from "./components/Watchlist";
 import Genres from "./components/Genres/Genres";
 import GPTSearchPage from "./components/GPTPage/GPTSearchPage";
 import MyAccount from "./components/MyAccount";
@@ -18,51 +18,6 @@ import GenrePage from "./components/Genres/GenrePage";
 
 function App() {
 
-  // const appRouter = createBrowserRouter([
-  //   {
-  //       path: "/",
-  //       element: <Login/>,
-  //   },
-  //   {
-  //     path: '/body',
-  //     element: <Body/>,
-  //     children: [
-  //       {
-  //         path: 'browse',
-  //         element: <Browse/>
-  //       },
-  //       {
-  //         path: 'GPTSearch',
-  //         element: <GPTSearchPage/>
-  //       },
-  //       {
-  //         path: 'movies',
-  //         element: <Movies/>
-  //       },
-  //       {
-  //         path: 'tvshows',
-  //         element: <TVShows/>
-  //       },
-  //       {
-  //         path: 'mylist',
-  //         element: <MyList/>
-  //       },
-  //       {
-  //         path: 'genre',
-  //         element: <Genre/>
-  //       },
-  //       {
-  //         path: 'account',
-  //         element: <MyAccount/>
-  //       },
-  //       {
-  //         path: 'explore',
-  //         element: <Explore/>
-  //       },
-  //     ]
-  //   }
-  // ]);
-
   const appRouter = createBrowserRouter(
     createRoutesFromElements(
       <>
@@ -71,7 +26,7 @@ function App() {
           <Route path="browse" element={<Browse/>}/>
           <Route path="movies" element={<Movies/>}/>
           <Route path="tvshows" element={<TVShows/>}/>
-          <Route path="mylist" element={<MyList/>}/>
+          <Route path="watchlist" element={<Watchlist/>}/>
           <Route path="genre" element={<Genres/>}>
             <Route path=":genre_id" element={<GenrePage/>}/>
           </Route>

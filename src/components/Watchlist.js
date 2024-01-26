@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MyList = () => {
+const Watchlist = () => {
   return (
     <div className='bg-[#141414] h-screen'>
         
@@ -8,4 +8,4 @@ const MyList = () => {
   )
 }
 
-export default MyList
+export default Watchlist

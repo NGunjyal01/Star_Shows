@@ -38,7 +38,7 @@ const SideMenu = () => {
                     <li className="block sm:hidden px-4 py-2 w-full md:hover:bg-[#00ADB5]"><NavLink to="/browse" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`} onClick={handleMenuClick}>Home</NavLink></li>
                     <li className="block sm:hidden px-4 py-2 w-full md:hover:bg-[#00ADB5]"><NavLink to="/movies" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`} onClick={handleMenuClick}>Movies</NavLink></li>
                     <li className="block sm:hidden px-4 py-2 w-full md:hover:bg-[#00ADB5]"><NavLink to="/tvshows" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`}onClick={handleMenuClick} >TV Shows</NavLink></li>
-                    <li className="block sm:hidden px-4 py-2 w-full md:hover:bg-[#00ADB5]"><NavLink to="/mylist" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`}onClick={handleMenuClick} >My List</NavLink></li>
+                    <li className="block sm:hidden px-4 py-2 w-full md:hover:bg-[#00ADB5]"><NavLink to="/watchlist" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`}onClick={handleMenuClick} >Watchlist</NavLink></li>
                     <li className="block sm:hidden px-4 py-2 w-full md:hover:bg-[#00ADB5]"><NavLink to="/genre/35" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`}onClick={handleMenuClick} >Genre</NavLink></li>
                     <li className="block sm:hidden px-4 py-2 w-full md:hover:bg-[#00ADB5]"><NavLink to="/GPTSearch" className={({isActive}) => `${isActive?"text-[#00ADB5]":""}`}onClick={handleMenuClick} >GPT Search</NavLink></li>
                     <li className="px-4 py-2 w-full md:hover:bg-[#00ADB5] md:hover:rounded-b-md"><button onClick={handleSignOut}> Sign Out </button> </li>
