@@ -18,7 +18,7 @@ const MoviePage = () => {
         <div className="w-full h-full bg-[#141414]">
             <div className="pt-16 sm:pt-0">
                 <MainVideoBackground movie_id={movie_id}/>
-                <MainMovieVideoTitle title={mainMovieDetails.title} movie_id={movie_id}/>
+                <MainMovieVideoTitle title={mainMovieDetails.title} movie_id={movie_id} poster_path={mainMovieDetails.poster_path}/>
             </div>
             <MainMovieDetails movie_id={movie_id}/>
             <MainMovieRecommendations movie_id={movie_id}/>

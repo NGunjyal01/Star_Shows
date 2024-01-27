@@ -1,30 +1,28 @@
 import { useState } from "react";
-import { getDatabase, ref, set } from "firebase/database";
-import { useDispatch, useSelector } from "react-redux";
-import { addMovies,addTVShows } from "../../utils/Slices/WatchlistSlice";
+import { getFirestore,doc, updateDoc,collection,setDoc, arrayUnion } from "firebase/firestore";
+import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 
-const WatchlistIcon = ({ id }) => {
+const WatchlistIcon = ({ id,poster_path }) => {
 
     const [hover, setHover] = useState(false);
-    const dispatch = useDispatch();
     const {pathname} = useLocation();
     const type = pathname.slice(1,8)==="tvshows"?"TVShows":"Movies";
     const user = useSelector((store) => store?.user?.uid);
-    const handleWatchlistButtonClick = (id) => {
+    const handleWatchlistButtonClick = async() => {
         if(!user)    return;
-        // const db = getDatabase();
-        // set(ref(db, "users/" + user), {
-        //   id: id,
-        // });
-        console.log(id);
-        // if(type==="Movies"){
-        //     dispatch(addMovies(id));
-        // }
-        // else{
-        //     dispatch(addTVShows(id));
-        // }
-
+        const db = getFirestore();
+        const docRef = doc(db, "Users", user);
+        if(type==="Movies"){
+            await updateDoc(docRef, {
+                movies: arrayUnion({id:id,poster_path:poster_path})
+            });
+        }
+        else{
+            await updateDoc(docRef, {
+                tvShows: arrayUnion({id:id,poster_path:poster_path}),
+            });
+        }
         console.log("done");
     };
 
@@ -44,7 +42,7 @@ const WatchlistIcon = ({ id }) => {
             setHover(false);
         }}
         onClick={() => {
-            handleWatchlistButtonClick(id);
+            handleWatchlistButtonClick();
         }}
         >
         <div className="text-4xl text-black">+</div>
