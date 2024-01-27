@@ -8,6 +8,7 @@ import mainMovieReducer from "./Slices/mainMovieSlice";
 import TVShowsReducer from "./Slices/TVShowsSlice";
 import mainTVShowReducer from "./Slices/mainTVShowSlice";
 import genreReducer from "./Slices/genreSlice";
+import watchlistReducer from "./Slices/WatchlistSlice";
 
 const appStore = configureStore({
     reducer:{
@@ -20,6 +21,7 @@ const appStore = configureStore({
         tvShows: TVShowsReducer,
         mainTVShow: mainTVShowReducer,
         genre: genreReducer,
+        watchlist: watchlistReducer,
     },
 });
 

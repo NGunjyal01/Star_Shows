@@ -19,7 +19,7 @@ const TVShowPage = () => {
         <div className="w-full h-full bg-[#141414]">
             <div className="pt-16 sm:pt-0"> 
                 <MainTVShowVideoBackground tvShow_id={tvShow_id}/>
-                <MainTVShowVideoTitle title={mainTVShowDetails.name}/>
+                <MainTVShowVideoTitle title={mainTVShowDetails.name} tvShow_id={tvShow_id}/>
             </div>
             <MainTVShowDetails tvShow_id={tvShow_id}/>
             <MainTVShowRecommendations tvShow_id={tvShow_id}/>

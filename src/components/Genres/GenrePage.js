@@ -23,12 +23,12 @@ const GenrePage = () => {
     <div className="pt-[20%] sm:pt-0">
       {movies?.length ? (
         <div>
-            <VideoTitle title={movies[0]?.title} overview={movies[0]?.overview}/>
+            <VideoTitle title={movies[0]?.title} overview={movies[0]?.overview} movie_id={movies[0]?.id}/>
             <VideoBackground movie_id={movies[0]?.id}/>
         </div>
       ) : (
         <div>
-            <TVShowVideoTitle title={tvShows[0]?.name} overview={tvShows[0]?.overview}/>
+            <TVShowVideoTitle title={tvShows[0]?.name} overview={tvShows[0]?.overview} tvShow_id={tvShows[0]?.id}/>
             <TVShowVideoBackground tvShow_id={tvShows[0]?.id}/>
         </div>
       )}
