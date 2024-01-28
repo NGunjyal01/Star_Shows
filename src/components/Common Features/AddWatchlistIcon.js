@@ -3,7 +3,7 @@ import { getFirestore,doc, updateDoc,collection,setDoc, arrayUnion } from "fireb
 import { useSelector } from "react-redux";
 import { useLocation } from "react-router-dom";
 
-const WatchlistIcon = ({ id,poster_path }) => {
+const AddWatchlistIcon = ({ id,poster_path }) => {
 
     const [hover, setHover] = useState(false);
     const {pathname} = useLocation();
@@ -51,4 +51,4 @@ const WatchlistIcon = ({ id,poster_path }) => {
     );
 };
 
-export default WatchlistIcon;
+export default AddWatchlistIcon;
