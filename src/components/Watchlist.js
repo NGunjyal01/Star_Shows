@@ -10,6 +10,7 @@ const Watchlist = () => {
 
   const [movies,setMovies] = useState(null);
   const [tvShows,setTVShows] = useState(null);
+  const [showRemove,setShowRemove] = useState(false);
   const user = useSelector(store => store?.user?.uid);
   const db = getFirestore();
   const docRef = doc(db, "Users",user);
@@ -25,16 +26,22 @@ const Watchlist = () => {
   
   if(!movies || !tvShows) return null;
 
-  return (!movies.length && !tvShows.length)?<div className="text-white bg-black h-screen pt-[10%]"> Empty</div>: (
-    <div className="bg-black h-screen pt-[10%]">
+  const totalItem = movies.length + tvShows.length;
+
+  return !totalItem?<div className="text-white text-4xl font-bold bg-[#141414] h-screen -mb-48 flex justify-center pt-[20%]"> Your Watchlist is Empty</div>: (
+    <div className={`bg-[#141414] pt-[7%] pl-7 ${totalItem<=9?"h-screen -mb-48":" h-full"}`}>
+      <div className="flex justify-between text-white mb-10">
+        <h1 className="text-3xl font-bold">Your Watchlist</h1>
+        <button className="bg-white text-black mr-10 w-28 h-10 rounded-lg" onClick={()=>{setShowRemove(!showRemove)}}>{showRemove?"Done":"Remove"}</button>
+      </div>
       <div className="flex flex-wrap">
-        {movies.map(movie => <div key={movie.id} className="flex flex-col items-center">
+        {movies.map(movie => <div key={movie.id} className="flex flex-col items-center mb-4">
           <MovieCard posterPath={movie.poster_path} movie_id={movie.id}/>
-          <RemoveWatchlistIcon id={movie.id} poster_path={movie.poster_path} type={"Movies"}/>
+          {showRemove && <RemoveWatchlistIcon id={movie.id} poster_path={movie.poster_path} type={"Movies"}/>}
         </div>)}
-        {tvShows.map(tvShow => <div key={tvShow.id} className="flex flex-col items-center">
+        {tvShows.map(tvShow => <div key={tvShow.id} className="flex flex-col items-center mb-4">
           <TVShowCard posterPath={tvShow.poster_path} movie_id={tvShow.id}/>
-          <RemoveWatchlistIcon id={tvShow.id} poster_path={tvShow.poster_path} type={"TVShows"}/>
+          {showRemove && <RemoveWatchlistIcon id={tvShow.id} poster_path={tvShow.poster_path} type={"TVShows"}/>}
         </div>)}
       </div>
     </div>

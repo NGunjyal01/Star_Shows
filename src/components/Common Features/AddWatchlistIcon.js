@@ -29,7 +29,7 @@ const AddWatchlistIcon = ({ id,poster_path }) => {
     return (
     <>
         {hover && (
-        <div className="absolute -mt-28 left-[25%] h-10 w-28 bg-white bg-opacity-70 rounded-full flex justify-center items-center">
+        <div className="absolute -mt-12 left-[80%] h-10 w-28 bg-white bg-opacity-70 rounded-full flex justify-center items-center">
             <div className="text-black font-semibold">Wishlist</div>
         </div>
         )}
