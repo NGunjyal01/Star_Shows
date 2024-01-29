@@ -23,8 +23,8 @@ const RemoveWatchlistIcon = ({ id,poster_path,type }) => {
     };
 
     return (
-        <div className="absolute mt-2 ml-24 px-3 py-1 bg-white hover:bg-opacity-70 rounded-full" onClick={handleWatchlistButtonClick}>
-            <div className="">X</div>
+        <div className="absolute mt-2 ml-[4.5rem] sm:ml-24 px-2 sm:px-3 py-1 bg-white hover:bg-opacity-70 rounded-full" onClick={handleWatchlistButtonClick}>
+            <div className="text-xs sm:text-base">X</div>
             <Toaster/>
         </div>
     );
