@@ -12,7 +12,7 @@ const PlayBtn = ({id}) => {
     }
 
     return (
-        <button className='px-3 py-1 sm:px-14 sm:py-4 bg-white text-black font-bold rounded-lg md:hover:bg-opacity-80' onClick={handleButtonClick}>Play</button>
+        <button className='px-7 py-1 sm:px-14 sm:py-4 bg-white text-black font-bold rounded-lg md:hover:bg-opacity-80' onClick={handleButtonClick}>Play</button>
     )
 }
 

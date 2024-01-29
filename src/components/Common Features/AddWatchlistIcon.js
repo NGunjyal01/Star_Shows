@@ -29,7 +29,7 @@ const AddWatchlistIcon = ({ id,poster_path }) => {
     return (
     <>
         <div
-        className="w-14 aspect-square rounded-lg bg-white bg-opacity-70 flex justify-center items-center"
+        className="w-16 h-9 sm:h-14 rounded-lg bg-white bg-opacity-70 flex justify-center"
         onMouseEnter={() => {
             setHover(true);
         }}
@@ -41,11 +41,11 @@ const AddWatchlistIcon = ({ id,poster_path }) => {
         }}
         >
         {hover && (
-        <div className="absolute -mt-28  h-10 w-28 bg-white rounded-full flex justify-center items-center">
+        <div className="absolute -mt-28 h-10 w-28 bg-white rounded-full flex justify-center items-center">
             <div className="text-black font-semibold">Wishlist</div>
         </div>
         )}
-        <div className="text-4xl text-black">+</div>
+        <div className="text-4xl text-black sm:mt-1.5 -mt-1">+</div>
         </div>
     </>
     );

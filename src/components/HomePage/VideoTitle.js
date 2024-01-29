@@ -11,7 +11,7 @@ const VideoTitle = ({title,overview,movie_id,poster_path}) => {
         <h1 className='text-xl md:text-3xl font-bold md:w-auto w-full'>{title}</h1>
         <p className='hidden md:inline-block py-4 text-lg w-2/5'>{overview}</p>
       </div>
-      <div className='absolute pt-[44%] pl-14 flex space-x-3'>
+      <div className='absolute pt-[47%] sm:pt-[44%] pl-5 sm:pl-14 mt-1 sm:mt-0 flex sm:space-x-3 space-x-2'>
         <PlayBtn id={movie_id}/>
         <MoreInfoBtn id={movie_id}/>
         <AddWatchlistIcon id={movie_id} poster_path={poster_path}/>
