@@ -29,7 +29,7 @@ const Watchlist = () => {
   const totalItem = movies.length + tvShows.length;
 
   return !totalItem?<div className="text-white text-4xl font-bold bg-[#141414] h-screen -mb-48 flex justify-center pt-[20%]"> Your Watchlist is Empty</div>: (
-    <div className={`bg-[#141414] pt-[20%] sm:pt-[7%] pl-7 ${totalItem<=9?"h-screen sm:-mb-48 -mb-32":" h-full"} `}>
+    <div className={`bg-[#141414] pt-[20%] sm:pt-[7%] pl-2 sm:pl-7 ${totalItem<=9?"h-screen sm:-mb-48 -mb-32":" h-full"} `}>
       <div className="flex justify-between text-white mb-10">
         <h1 className="text-2xl sm:text-3xl font-bold">Your Watchlist</h1>
         <button className="bg-white text-black mr-10 sm:w-28 w-24 sm:h-10 h-8 rounded-lg" onClick={()=>{setShowRemove(!showRemove)}}>{showRemove?"Done":"Remove"}</button>

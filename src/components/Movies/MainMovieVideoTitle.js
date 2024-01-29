@@ -8,7 +8,7 @@ const MainMovieVideoTitle = ({title,movie_id,poster_path}) => {
       <h1 className='text-xl md:text-3xl font-bold md:w-auto w-full'>{title}</h1>
       <div className='my-4 mt-2 md:mt-6 flex space-x-3'>
         <MoreInfoBtn id={movie_id}/>
-        <AddWatchlistIcon id={movie_id} poster_path={poster_path}/>  
+        <div className="hidden sm:block"><AddWatchlistIcon id={movie_id} poster_path={poster_path}/></div>  
       </div>
     </div>
   );

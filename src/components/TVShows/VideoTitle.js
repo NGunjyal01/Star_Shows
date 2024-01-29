@@ -6,8 +6,8 @@ const VideoTitle = ({title,overview,tvShow_id,poster_path}) => {
 
   return (
     <>
-      <div className='pt-[40%] md:pt-[30%] px-14 absolute text-white -ml-9 md:m-0 md:block'>
-        <h1 className='text-xl md:text-3xl font-bold md:w-auto w-full'>{title}</h1>
+      <div className='pt-[39%] md:pt-[30%] px-14 absolute text-white -ml-9 md:m-0 md:block'>
+        <h1 className='text-lg md:text-3xl font-bold md:w-auto w-full'>{title}</h1>
         <p className='hidden md:inline-block py-4 text-lg w-2/5'>{overview}</p>
       </div>
       <div className='absolute pt-[47%] sm:pt-[44%] pl-5 sm:pl-14 flex sm:space-x-3 space-x-2'>
