@@ -13,7 +13,7 @@ const MainTVShowDetails = ({tvShow_id}) => {
     
     return (
         <div className="text-white sm:p-10 p-5 -mt-7 sm:mt-0">
-            <div className="absolute sm:hidden block right-5 top-[43%]"><AddWatchlistIcon id={tvShow_id} poster_path={poster_path}/></div>
+            <div className="absolute sm:hidden block right-5 top-[41%]"><AddWatchlistIcon id={tvShow_id} poster_path={poster_path}/></div>
             <div className="grid grid-cols-12">
                 <div className="sm:col-span-8 col-span-full">
                     <div className="flex sm:text-lg text-sm">
