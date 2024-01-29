@@ -1,4 +1,6 @@
 import AddWatchlistIcon from "../Common Features/AddWatchlistIcon"
+import MoreInfoBtn from "../Common Features/MoreInfoBtn"
+import PlayBtn from "../Common Features/PlayBtn"
 
 const VideoTitle = ({title,overview,tvShow_id,poster_path}) => {
 
@@ -9,8 +11,8 @@ const VideoTitle = ({title,overview,tvShow_id,poster_path}) => {
         <p className='hidden md:inline-block py-4 text-lg w-2/5'>{overview}</p>
       </div>
       <div className='absolute pt-[44%] pl-14 flex space-x-3'>
-        <button className='px-3 py-1 md:px-14 md:py-4 bg-white text-black font-bold rounded-lg md:hover:bg-opacity-80'>Play</button>
-        <button className='hidden md:inline-block mx-2 px-14 py-4 bg-[#393E46] font-bold rounded-lg md:hover:bg-opacity-80'>More Info</button>
+        <PlayBtn id={tvShow_id}/>
+        <MoreInfoBtn id={tvShow_id}/>
         <AddWatchlistIcon id={tvShow_id} poster_path={poster_path}/>
       </div>
     </>

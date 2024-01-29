@@ -7,9 +7,9 @@ const MainTVShowDetails = ({tvShow_id}) => {
     useMainTVShowCast(tvShow_id);
     const mainTVShowDetails = useSelector(store => store.mainTVShow.mainTVShowDetails);
     const mainTVShowCast = useSelector(store => store.mainTVShow.mainTVShowCast);
-    if(!mainTVShowCast || !mainTVShowDetails)   return null;
     const { first_air_date,genres,number_of_episodes,number_of_seasons,overview,seasons,status } = mainTVShowDetails;
-
+    if(!mainTVShowCast || !mainTVShowDetails)   return null;
+    
     return (
         <div className="text-white sm:p-10 p-5 -mt-7 sm:mt-0">
             <div className="grid grid-cols-12">
