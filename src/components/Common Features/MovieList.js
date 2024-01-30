@@ -14,7 +14,7 @@ const MovieList = ({title,movies}) => {
     }
 
     return movies && (
-        <div className="px-6 text-white">
+        <div className="sm:px-6 p-2 sm:py-4 text-white">
             <h1 className="py-2 px-2 text-xl md:text-3xl">{title}</h1>
             <div className="flex items-center">
                 <FaAngleLeft className="hidden sm:block absolute z-10 left-8 md:hover:opacity-60" onClick={slideLeft} size={30}/>
