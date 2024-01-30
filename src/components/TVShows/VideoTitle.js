@@ -13,7 +13,7 @@ const VideoTitle = ({title,overview,tvShow_id,poster_path}) => {
       <div className='absolute pt-[47%] sm:pt-[44%] pl-5 sm:pl-14 flex sm:space-x-3 space-x-2'>
         <PlayBtn id={tvShow_id}/>
         <MoreInfoBtn id={tvShow_id}/>
-        <AddWatchlistIcon id={tvShow_id} poster_path={poster_path}/>
+        <AddWatchlistIcon id={tvShow_id} poster_path={poster_path} type={"TVShow"}/>
       </div>
     </>
   )

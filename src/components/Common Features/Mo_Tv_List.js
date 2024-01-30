@@ -17,15 +17,15 @@ const Mo_Tv_List = ({ heading,MoTv,type }) => {
 
     return MoTv && (
         <div className="sm:px-6 p-2 sm:py-4 text-white">
-            <h1 className="py-2 px-2 text-xl md:text-3xl">{heading}</h1>
+            <h1 className="pb-2 sm:pb-5 pl-2 text-xl md:text-3xl">{heading}</h1>
             <div className="flex items-center">
-                <FaAngleLeft className="hidden sm:block absolute z-10 left-8 md:hover:opacity-60" onClick={slideLeft} size={30}/>
+                <FaAngleLeft className="hidden sm:block absolute z-10 -ml-5 md:hover:opacity-60" onClick={slideLeft} size={30}/>
                 <div id={heading} className="flex overflow-x-scroll scrollbar-hide scroll-smooth whitespace-nowrap">
                     <div className="flex">
                         {MoTv.map( movie =><Mo_Tv_Card key={movie.id} posterPath={movie.poster_path} id={movie.id} type={type}/>)}   
                     </div>    
                 </div>
-                <FaAngleRight className="hidden sm:block absolute right-2 md:hover:opacity-60" onClick={slideRight} size={30}/>
+                <FaAngleRight className="hidden sm:block absolute z-10 ml-[94%] md:hover:opacity-60" onClick={slideRight} size={30}/>
             </div>
         </div>
     )

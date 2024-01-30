@@ -14,7 +14,7 @@ const MainMovieRecommendations = ({ movie_id }) => {
     if(!similarMovies || !movieRecommendations) return null;
 
     return (
-        <div className="mt-4">
+        <div className="mt-4 ml-2 sm:ml-4">
             {!movieRecommendations.length ? null : <Mo_Tv_List heading={"Recommendations"} MoTv={movieRecommendations} type={"Movie"}/>}
             {!similarMovies.length ? null : <Mo_Tv_List heading={"Similar Movies"} MoTv={similarMovies} type={"Movie"}/>}
         </div>

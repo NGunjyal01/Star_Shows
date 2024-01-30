@@ -15,6 +15,7 @@ import MyAccount from "./components/MyAccount";
 import Explore from "./components/Explore";
 import TVShowPage from "./components/TVShows/MainTVShow/TVShowPage";
 import GenrePage from "./components/Genres/GenrePage";
+import { Toaster } from 'react-hot-toast';
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
   return (
     <Provider store={appStore}>
       <RouterProvider router={appRouter} />
+      <Toaster/>
     </Provider>
   );
 }
