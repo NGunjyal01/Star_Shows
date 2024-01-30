@@ -1,8 +1,8 @@
 import { useState,useEffect } from "react";
 import { useSelector,useDispatch } from "react-redux";
 import EpisodeDetails from "./EpisodeDetails";
-import { API_OPTIONS } from "../../utils/constants";
-import { addMainTVShowSeasonDetails } from "../../utils/Slices/mainTVShowSlice";
+import { API_OPTIONS } from "../../../utils/constants";
+import { addMainTVShowSeasonDetails } from "../../../utils/Slices/mainTVShowSlice";
 
 const SeasonDetails = ({tvShow_id,seasons}) => {    
 

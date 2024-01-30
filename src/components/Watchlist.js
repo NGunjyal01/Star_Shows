@@ -2,8 +2,6 @@ import { useState } from "react";
 import { doc, getDoc } from "firebase/firestore";
 import { useSelector } from "react-redux";
 import { getFirestore } from "firebase/firestore";
-import MovieCard from "./Common Features/MovieCard";
-import TVShowCard from "./Common Features/TVShowCard";
 import RemoveWatchlistIcon from "./Common Features/RemoveWatchlistIcon";
 import Mo_Tv_Card from "./Common Features/Mo_Tv_Card";
 

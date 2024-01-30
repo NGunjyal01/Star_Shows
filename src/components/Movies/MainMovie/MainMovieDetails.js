@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import useMainMovieCast from "../../hooks/MovieHooks/useMainMovieCast";
-import AddWatchlistIcon from "../Common Features/AddWatchlistIcon";
+import useMainMovieCast from "../../../hooks/MovieHooks/useMainMovieCast";
+import AddWatchlistIcon from "../../Common Features/AddWatchlistIcon";
 
 
 const MainMovieDetails = ({movie_id}) => {

@@ -1,5 +1,5 @@
-import AddWatchlistIcon from "../Common Features/AddWatchlistIcon";
-import MoreInfoBtn from "../Common Features/MoreInfoBtn";
+import AddWatchlistIcon from "../../Common Features/AddWatchlistIcon";
+import MoreInfoBtn from "../../Common Features/MoreInfoBtn";
 
 const MainTVShowVideoTitle = ({title,tvShow_id,poster_path}) => {
 

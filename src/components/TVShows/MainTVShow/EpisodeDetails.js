@@ -1,4 +1,4 @@
-import { IMG_CDN } from "../../utils/constants";
+import { IMG_CDN } from "../../../utils/constants";
 
 const EpisodeDetails = ({episode}) => {
 

@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import useMainTVShowTrailer from "../../hooks/TVShowsHooks/useMainTVShowTrailer";
+import useMainTVShowTrailer from "../../../hooks/TVShowsHooks/useMainTVShowTrailer";
 
 const MainTVShowVideoBackground = ({tvShow_id}) => {
     

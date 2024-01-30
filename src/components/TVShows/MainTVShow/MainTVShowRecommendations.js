@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import useSimilarTVShows from "../../hooks/TVShowsHooks/useSimilarTVShows";
-import useTVShowRecommendations from "../../hooks/TVShowsHooks/useTVShowRecommendations";
-import Mo_Tv_List from "../Common Features/Mo_Tv_List";
+import useSimilarTVShows from "../../../hooks/TVShowsHooks/useSimilarTVShows";
+import useTVShowRecommendations from "../../../hooks/TVShowsHooks/useTVShowRecommendations";
+import Mo_Tv_List from "../../Common Features/Mo_Tv_List";
 
 const MainTVShowRecommendations = ({tvShow_id}) => {
 

@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import useTVShowDetails from "../../hooks/TVShowsHooks/useTVShowDetails";
+import useTVShowDetails from "../../../hooks/TVShowsHooks/useTVShowDetails";
 import MainTVShowDetails from "./MainTVShowDetails";
 import MainTVShowRecommendations from "./MainTVShowRecommendations";
 import { useParams } from "react-router-dom";

@@ -3,7 +3,7 @@ import PlayBtn from "../Common Features/PlayBtn";
 import MoreInfoBtn from "../Common Features/MoreInfoBtn";
 
 
-const VideoTitle = ({title,overview,movie_id,poster_path}) => {
+const VideoTitle = ({ title,overview,movie_id,poster_path }) => {
 
   return !title? null: (
     <>

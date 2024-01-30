@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import useMovieDetails from "../../hooks/MovieHooks/useMovieDetails";
+import useMovieDetails from "../../../hooks/MovieHooks/useMovieDetails";
 import MainVideoBackground from "./MainVideoBackground";
 import MainMovieDetails from "./MainMovieDetails";
 import MainMovieRecommendations from "./MainMovieRecommendations";

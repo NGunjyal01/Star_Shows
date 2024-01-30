@@ -1,4 +1,3 @@
-import MovieCard from "./MovieCard"
 import { FaAngleLeft } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6"; 
 import Mo_Tv_Card from "./Mo_Tv_Card";

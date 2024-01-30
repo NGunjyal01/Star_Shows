@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
-import useMainTVShowCast from "../../hooks/TVShowsHooks/useMainTVShowCast";
+import useMainTVShowCast from "../../../hooks/TVShowsHooks/useMainTVShowCast";
 import SeasonDetails from "./SeasonDetails";
-import AddWatchlistIcon from "../Common Features/AddWatchlistIcon";
+import AddWatchlistIcon from "../../Common Features/AddWatchlistIcon";
 
 const MainTVShowDetails = ({tvShow_id}) => {
 
