@@ -3,6 +3,7 @@ import { useSelector,useDispatch } from "react-redux";
 import EpisodeDetails from "./EpisodeDetails";
 import { API_OPTIONS } from "../../../utils/constants";
 import { addMainTVShowSeasonDetails } from "../../../utils/Slices/mainTVShowSlice";
+import LoadMoreBtn from "../../Common Features/LoadMoreBtn";
 
 const SeasonDetails = ({tvShow_id,seasons}) => {    
 
@@ -59,9 +60,7 @@ const SeasonDetails = ({tvShow_id,seasons}) => {
             <div className="sm:w-11/12">
                 {episodes.slice(0,displayEpisodes).map((episode) => <EpisodeDetails episode={episode}/>)}
             </div>
-            {episodes.length>10 && loadMore && <div className="flex flex-row items-center mt-4 text-white">
-                <hr className="sm:w-[45%] w-[37%] mr-2"/><button className="bg-white sm:px-4 sm:py-2 px-2.5 py-1.5 text-black text-xs sm:text-base rounded-md sm:rounded-lg " onClick={()=>{handleLoadMoreClick(episodes.length)}}>Load More</button><hr className="sm:w-[45%] w-[37%] ml-2"/>
-            </div>}
+            {episodes.length>10 && loadMore && <div onClick={()=>{handleLoadMoreClick(episodes.length)}}><LoadMoreBtn/></div>}
             {/* {episodes.length>10 && loadMore && <div className="absolute flex justify-center items-center -mt-36 h-36 w-full bg-[#141414] bg-opacity-95  z-50">
                 <button className="bg-white px-4 py-2 text-black" onClick={()=>{handleLoadMoreClick(episodes.length)}}>Load More</button>
             </div>} */}
