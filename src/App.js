@@ -5,7 +5,7 @@ import { createBrowserRouter,createRoutesFromElements,RouterProvider,Route } fro
 import Login from "./components/Login/Login";
 import Body from "./components/Body"
 import Browse from "./components/HomePage/Browse";
-import MoviePage from "./components/Movies/MoviePage";
+import MoviePage from "./components/Movies/MainMovie/MoviePage";
 import Movies from "./components/Movies/Movies";
 import TVShows from "./components/TVShows/TVShows";
 import Watchlist from "./components/Watchlist";
@@ -13,7 +13,7 @@ import Genres from "./components/Genres/Genres";
 import GPTSearchPage from "./components/GPTPage/GPTSearchPage";
 import MyAccount from "./components/MyAccount";
 import Explore from "./components/Explore";
-import TVShowPage from "./components/TVShows/TVShowPage";
+import TVShowPage from "./components/TVShows/MainTVShow/TVShowPage";
 import GenrePage from "./components/Genres/GenrePage";
 
 function App() {

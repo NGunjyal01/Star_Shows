@@ -29,9 +29,11 @@ const AddWatchlistIcon = ({ id,poster_path }) => {
                 await updateDoc(docRef, {
                     movies: arrayUnion({id:id,poster_path:poster_path})
                 });
+                console.log("add");
                 return toast.success('Added To Your Watchlist');
             }
             else{
+                console.log("already");
                 return toast.error("Already In Your Watchlist");
             }
         }
@@ -40,16 +42,17 @@ const AddWatchlistIcon = ({ id,poster_path }) => {
                 await updateDoc(docRef, {
                     tvShows: arrayUnion({id:id,poster_path:poster_path}),
                 });
+                console.log("add");
                 return toast.success('Added To Your Watchlist');
             }
             else{
+                console.log("already");
                 return toast.error("Already In Your Watchlist");
             }
         }
     };
 
     return (
-    <>
         <div className="w-16 h-8 sm:h-14 rounded-lg bg-white bg-opacity-70 flex justify-center" 
         onMouseEnter={() => {setHover(true)}} onMouseLeave={() => {setHover(false)}} onClick={handleWatchlistButtonClick}>
             {hover && (<div className="absolute -mt-14 h-10 w-28 bg-white rounded-full flex justify-center items-center">
@@ -58,7 +61,6 @@ const AddWatchlistIcon = ({ id,poster_path }) => {
             <div className="text-2xl sm:text-4xl text-black sm:mt-1.5">+</div>
             <Toaster/>
         </div>
-    </>
     );
 };
 
