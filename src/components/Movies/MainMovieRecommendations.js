@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import useMovieRecommendations from "../../hooks/MovieHooks/useMovieRecommendations";
 import useSimilarMovies from "../../hooks/MovieHooks/useSimilarMovies";
-import MovieList from "../Common Features/MovieList";
+import Mo_Tv_List from "../Common Features/Mo_Tv_List";
 
 
 const MainMovieRecommendations = ({ movie_id }) => {
@@ -15,8 +15,8 @@ const MainMovieRecommendations = ({ movie_id }) => {
 
     return (
         <div className="mt-4">
-            {!movieRecommendations.length ? null : <MovieList title={"Recommendations"} movies={movieRecommendations}/>}
-            {!similarMovies.length ? null : <MovieList title={"Similar Movies"} movies={similarMovies}/>}
+            {!movieRecommendations.length ? null : <Mo_Tv_List heading={"Recommendations"} MoTv={movieRecommendations} type={"Movie"}/>}
+            {!similarMovies.length ? null : <Mo_Tv_List heading={"Similar Movies"} MoTv={similarMovies} type={"Movie"}/>}
         </div>
     );
 };

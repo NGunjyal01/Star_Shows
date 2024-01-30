@@ -21,6 +21,18 @@ export const SUPPORTED_LANG = [
   {identifier: "jap", name: "Japanese"}
 ];
 
+export const moviesType = [
+  { label:"Now Playing Movies" },
+  { label:"Top Rated Movies"  },
+  { label:"Popular Movies" },
+  { label:"Upcoming Movies"  }];
+
+export const tvShowsType = [
+  { label:"Airing Today Shows" },
+  { label:"On The Air Shows" },
+  { label:"Popular Shows" },
+  { label:"Top Rated Shows" }];
+
 export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;
 
 export const Movies_Genres = [

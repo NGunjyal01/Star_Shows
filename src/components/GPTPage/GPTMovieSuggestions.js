@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import MovieList from '../Common Features/MovieList';
+import Mo_Tv_List from '../Common Features/Mo_Tv_List';
 
 const GPTMovieSuggestions = () => {
 
@@ -8,7 +8,7 @@ const GPTMovieSuggestions = () => {
   if(!movieNames) return null;
   return (
     <div className='p-4 m-4 bg-black text-white bg-opacity-90'>
-      {movieNames.map((movieName,index) => <MovieList key={movieName} title={movieName} moovies={movieResults[index]} />)}
+      {movieNames.map((movieName,index) => <Mo_Tv_List key={movieName} heading={movieName} MoTv={movieResults[index]} type={"Movie"}/>)}
     </div>
   )
 }

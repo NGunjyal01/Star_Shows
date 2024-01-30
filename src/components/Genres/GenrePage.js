@@ -4,10 +4,9 @@ import useTVShowGenre from "../../hooks/Genres/useTVShowGenre";
 import { useSelector } from "react-redux";
 import VideoTitle from "../HomePage/VideoTitle";
 import VideoBackground from "../HomePage/VideoBackground";
-import MovieList from "../Common Features/MovieList";
-import TVShowList from "../Common Features/TVShowList";
 import TVShowVideoTitle from "../TVShows/VideoTitle";
 import TVShowVideoBackground from "../TVShows/VideoBackground";
+import Mo_Tv_List from "../Common Features/Mo_Tv_List";
 
 const GenrePage = () => {
     const { genre_id } = useParams();
@@ -33,8 +32,8 @@ const GenrePage = () => {
         </div>
       )}
       <div className="mt-8 sm:ml-5">
-        {movies?.length && <MovieList title={"Movies"} movies={movies}/>}
-        {tvShows?.length && <TVShowList title={"TVShows"} tvShows={tvShows}/>}
+        {movies?.length && <Mo_Tv_List heading={"Movies"} MoTv={movies} type={"Movie"}/>}
+        {tvShows?.length && <Mo_Tv_List heading={"TVShows"} MoTv={tvShows} type={"TVShow"}/>}
       </div>
     </div>
   );

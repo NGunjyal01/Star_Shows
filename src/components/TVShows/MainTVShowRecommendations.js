@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import useSimilarTVShows from "../../hooks/TVShowsHooks/useSimilarTVShows";
 import useTVShowRecommendations from "../../hooks/TVShowsHooks/useTVShowRecommendations";
-import TVShowList from "../Common Features/TVShowList";
+import Mo_Tv_List from "../Common Features/Mo_Tv_List";
 
 const MainTVShowRecommendations = ({tvShow_id}) => {
 
@@ -15,8 +15,8 @@ const MainTVShowRecommendations = ({tvShow_id}) => {
 
     return (
         <div className="mt-4">
-            {!similarTVShows.length ? null : <TVShowList title={"Similar Shows"} tvShows={similarTVShows}/>}
-            {!tvShowRecommendations.length ? null : <TVShowList title={"Recommendations"} tvShows={tvShowRecommendations}/>}
+            {!similarTVShows.length ? null : <Mo_Tv_List heading={"Similar Shows"} MoTv={similarTVShows} type={"TVShow"} />}
+            {!tvShowRecommendations.length ? null : <Mo_Tv_List heading={"Recommendations"} MoTv={tvShowRecommendations} type={"TVShow"} />}
         </div>
     );
 };

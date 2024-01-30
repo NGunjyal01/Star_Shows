@@ -5,6 +5,7 @@ import { getFirestore } from "firebase/firestore";
 import MovieCard from "./Common Features/MovieCard";
 import TVShowCard from "./Common Features/TVShowCard";
 import RemoveWatchlistIcon from "./Common Features/RemoveWatchlistIcon";
+import Mo_Tv_Card from "./Common Features/Mo_Tv_Card";
 
 const Watchlist = () => {
 
@@ -36,11 +37,11 @@ const Watchlist = () => {
       </div>
       <div className="flex flex-wrap">
         {movies.map(movie => <div key={movie.id} className="flex flex-col items-center mb-4">
-          <MovieCard posterPath={movie.poster_path} movie_id={movie.id}/>
+          <Mo_Tv_Card posterPath={movie.poster_path} id={movie.id} type={"Movie"}/>
           {showRemove && <RemoveWatchlistIcon id={movie.id} poster_path={movie.poster_path} type={"Movies"}/>}
         </div>)}
         {tvShows.map(tvShow => <div key={tvShow.id} className="flex flex-col items-center mb-4">
-          <TVShowCard posterPath={tvShow.poster_path} movie_id={tvShow.id}/>
+          <Mo_Tv_Card posterPath={tvShow.poster_path} id={tvShow.id} type={"TVShow"}/>
           {showRemove && <RemoveWatchlistIcon id={tvShow.id} poster_path={tvShow.poster_path} type={"TVShows"}/>}
         </div>)}
       </div>

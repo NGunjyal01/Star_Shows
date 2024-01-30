@@ -1,8 +1,7 @@
 import { API_OPTIONS } from "../utils/constants";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import MovieList from "./Common Features/MovieList";
-import TVShowList from "./Common Features/TVShowList";
+import Mo_Tv_List from "./Common Features/Mo_Tv_List";
 
 const Explore = () => {
 
@@ -30,8 +29,8 @@ const Explore = () => {
     return (!movies || !tvShows)? null: (
     <div className='bg-[#141414] h-screen'>
         <div className="pt-20 sm:pt-32 sm:pl-10">
-            {movies.length?<MovieList title={"Movies"} movies={movies}/>:null}
-            {tvShows.length?<TVShowList title={"TVShows"} tvShows={tvShows}/>:null}
+            {movies.length?<Mo_Tv_List heading={"Movies"} MoTv={movies} type={"Movie"}/>:null}
+            {tvShows.length?<Mo_Tv_List heading={"TVShows"} MoTv={tvShows} type={"TVShow"}/>:null}
         </div>
     </div>
     );
