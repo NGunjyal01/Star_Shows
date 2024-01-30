@@ -22,6 +22,8 @@ const MainMovieRecommendations = ({ movie_id }) => {
     useEffect(()=>{
         setRMNumber(6);
         setSMNumber(6);
+        setLoadMoreRM(true);
+        setLoadMoreSM(true);
     },[movie_id]);
     
     const handleLoadMoreBtnClick = (type,totalLength)=>{

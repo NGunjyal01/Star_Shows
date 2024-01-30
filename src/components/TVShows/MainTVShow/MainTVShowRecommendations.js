@@ -22,6 +22,8 @@ const MainTVShowRecommendations = ({tvShow_id}) => {
     useEffect(()=>{
         setRTVNumber(6);
         setSTVNumber(6);
+        setLoadMoreRTV(true);
+        setLoadMoreSTV(true);
     },[tvShow_id]);
     
     const handleLoadMoreBtnClick = (type,totalLength)=>{
