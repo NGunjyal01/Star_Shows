@@ -7,6 +7,8 @@ import { addUser, removeUser } from "../../utils/Slices/userSlice";
 import SideMenu from "./SideMenu";
 import SearchBar from "./SearchBar";
 import TopMenu from "./TopMenu";
+import { addDoc, collection, doc, getDoc, setDoc } from "firebase/firestore";
+import { getFirestore } from "firebase/firestore";
 
 const Header = () => {
 
@@ -45,6 +47,18 @@ const Header = () => {
             photoURL: photoURL,
           })
         );
+        const db = getFirestore();
+        const docRef = doc(db, "Users",uid);
+        getDoc(docRef).then((docSnap)=>{
+          if(!docSnap.exists()){
+            // docSnap.data() will be undefined in this case
+            setDoc(docRef,{
+              movies:[],
+              tvShows:[],
+            });
+            console.log("new doc created")
+          }
+        })
         navigate("/browse");
       } else {
         // User is signed out
@@ -52,6 +66,7 @@ const Header = () => {
         navigate("/");
       }
     });
+
     return () => unsubscribe();
   }, []);
 
