@@ -2,7 +2,7 @@ import AddWatchlistIcon from "../Common Features/AddWatchlistIcon"
 import MoreInfoBtn from "../Common Features/MoreInfoBtn"
 import PlayBtn from "../Common Features/PlayBtn"
 
-const VideoTitle = ({title,overview,tvShow_id,poster_path}) => {
+const TVShowVideoTitle = ({title,overview,tvShow_id,poster_path}) => {
 
   return (
     <>
@@ -19,4 +19,4 @@ const VideoTitle = ({title,overview,tvShow_id,poster_path}) => {
   )
 }
 
-export default VideoTitle
+export default TVShowVideoTitle

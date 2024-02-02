@@ -56,7 +56,7 @@ const Header = () => {
               movies:[],
               tvShows:[],
             });
-            console.log("new doc created")
+            // console.log("new doc created")
           }
         })
         navigate("/browse");

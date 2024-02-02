@@ -12,15 +12,16 @@ const MoviePage = () => {
     //getting movie details and add them to store
     useMovieDetails(movie_id);
     const mainMovieDetails = useSelector(store => store.mainMovie.mainMovieDetails);
+    const { title,poster_path } = mainMovieDetails;
 
     if(!mainMovieDetails)    return null;
     return (
         <div className="w-full h-full bg-[#141414]">
             <div className="pt-16 sm:pt-0">
                 <MainVideoBackground movie_id={movie_id}/>
-                <MainMovieVideoTitle title={mainMovieDetails.title} movie_id={movie_id} poster_path={mainMovieDetails.poster_path}/>
+                <MainMovieVideoTitle title={title} movie_id={movie_id} poster_path={poster_path}/>
             </div>
-            <MainMovieDetails movie_id={movie_id}/>
+            <MainMovieDetails/>
             <MainMovieRecommendations movie_id={movie_id}/>
         </div>
     );

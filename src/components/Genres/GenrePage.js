@@ -4,19 +4,20 @@ import useTVShowGenre from "../../hooks/Genres/useTVShowGenre";
 import { useSelector } from "react-redux";
 import VideoTitle from "../HomePage/VideoTitle";
 import VideoBackground from "../HomePage/VideoBackground";
-import TVShowVideoTitle from "../TVShows/VideoTitle";
-import TVShowVideoBackground from "../TVShows/VideoBackground";
+import TVShowVideoTitle from "../TVShows/TVShowVideoTitle";
+import TVShowVideoBackground from "../TVShows/TVShowVideoBackground";
 import Mo_Tv_List from "../Common Features/Mo_Tv_List";
 
 const GenrePage = () => {
-    const { genre_id } = useParams();
 
-    useMovieGenre(genre_id);
-    useTVShowGenre(genre_id);
-    const movies = useSelector((store) => store.genre.movies);
-    const tvShows = useSelector((store) => store.genre.tvShows);
+  const { genre_id } = useParams();
 
-    if(!movies || !tvShows) return null;
+  useMovieGenre(genre_id);
+  useTVShowGenre(genre_id);
+  const movies = useSelector((store) => store.genre.movies);
+  const tvShows = useSelector((store) => store.genre.tvShows);
+
+  if(!movies || !tvShows) return null;
 
   return (
     <div className="pt-[20%] sm:pt-0">

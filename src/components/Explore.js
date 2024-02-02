@@ -11,7 +11,7 @@ const Explore = () => {
         return json.results;
     };
     const searchTVShow = async(tvShow) =>{
-        const data = await fetch('https://api.themoviedb.org/3/search/tv?query=' + tvShow + '&page=1', API_OPTIONS);
+        const data = await fetch('https://api.themoviedb.org/3/search/tv?query=' + tvShow, API_OPTIONS);
         const json =  await data.json();
         return json.results;
     };
@@ -28,7 +28,7 @@ const Explore = () => {
 
     return (!movies || !tvShows)? null: (
     <div className='bg-[#141414] h-screen'>
-        <div className="pt-20 sm:pt-32 sm:pl-10">
+        <div className="pt-20 sm:pt-32 sm:pl-6">
             {movies.length?<Mo_Tv_List heading={"Movies"} MoTv={movies} type={"Movie"}/>:null}
             {tvShows.length?<Mo_Tv_List heading={"TVShows"} MoTv={tvShows} type={"TVShow"}/>:null}
         </div>

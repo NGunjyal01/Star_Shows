@@ -1,9 +1,9 @@
 import { useEffect } from 'react'
 import { API_OPTIONS } from '../../utils/constants';
 import { useDispatch } from 'react-redux';
-import { addMovieRecommendations } from '../../utils/Slices/mainMovieSlice';
+import { addMovieRecommendations, addSimilarMovies } from '../../utils/Slices/mainMovieSlice';
 
-const useMovieRecommendations = (movie_id) => {
+const useRecommendedMovies = (movie_id) => {
 
     const dispatch = useDispatch();
 
@@ -13,9 +13,16 @@ const useMovieRecommendations = (movie_id) => {
         dispatch(addMovieRecommendations(json.results));
     };
 
+    const getSimilarMovies = async()=>{
+        const data = await fetch("https://api.themoviedb.org/3/movie/" + movie_id + "/similar", API_OPTIONS);
+        const json = await data.json();
+        dispatch(addSimilarMovies(json.results));
+    };
+
     useEffect(()=>{
         getMovieRecommendations();
+        getSimilarMovies();
     },[movie_id]);
 }
 
-export default useMovieRecommendations;
+export default useRecommendedMovies;

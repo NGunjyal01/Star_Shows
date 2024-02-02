@@ -1,15 +1,13 @@
 import { useSelector } from "react-redux";
-import useMovieRecommendations from "../../../hooks/MovieHooks/useMovieRecommendations";
-import useSimilarMovies from "../../../hooks/MovieHooks/useSimilarMovies";
 import Mo_Tv_Card from "../../Common Features/Mo_Tv_Card";
 import LoadMoreBtn from "../../Common Features/LoadMoreBtn";
 import { useEffect, useState } from "react";
+import useRecommendedMovies from "../../../hooks/MovieHooks/useRecommendedMovies";
 
 
 const MainMovieRecommendations = ({ movie_id }) => {
     
-    useMovieRecommendations(movie_id);
-    useSimilarMovies(movie_id);
+    useRecommendedMovies(movie_id);
     const movieRecommendations = useSelector(store => store.mainMovie.movieRecommendations);
     const similarMovies = useSelector(store => store.mainMovie.similarMovies);
 

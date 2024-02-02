@@ -1,18 +1,19 @@
 import { useSelector } from "react-redux";
-import useMainMovieCast from "../../../hooks/MovieHooks/useMainMovieCast";
 import AddWatchlistIcon from "../../Common Features/AddWatchlistIcon";
+import { useParams } from "react-router-dom";
 
 
-const MainMovieDetails = ({movie_id}) => {
+const MainMovieDetails = () => {
 
-    useMainMovieCast(movie_id);
+    const {movie_id} = useParams();
+
     const mainMovieDetails = useSelector(store => store.mainMovie.mainMovieDetails);
     const { release_date,runtime,overview,genres,poster_path } = mainMovieDetails;
     const mainMovieCast = useSelector(store => store.mainMovie.mainMovieCast);
 
     return  (
         <div className="text-white sm:p-10 p-5 -mt-7 sm:mt-0">
-            <div className="absolute sm:hidden block right-5 top-[41%]"><AddWatchlistIcon id={movie_id} poster_path={poster_path}/></div>
+            <div className="absolute sm:hidden block right-5 top-[41%]"><AddWatchlistIcon id={movie_id} poster_path={poster_path} type={"Movie"}/></div>
             <div className="grid grid-cols-12">
                 <div className="sm:col-span-8 col-span-full">
                     <div className="flex sm:text-lg text-sm">

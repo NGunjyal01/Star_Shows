@@ -22,7 +22,7 @@ const PhoneNumberSignIn = () => {
         }).catch((error) => {
           // Error; SMS not sent
           // ...
-          console.log(error.message);
+          // console.log(error.message);
         });
     };
     

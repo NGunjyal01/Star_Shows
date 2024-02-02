@@ -21,7 +21,7 @@ const TVShowPage = () => {
                 <MainTVShowVideoBackground tvShow_id={tvShow_id}/>
                 <MainTVShowVideoTitle title={mainTVShowDetails.name} tvShow_id={tvShow_id} poster_path={mainTVShowDetails.poster_path}/>
             </div>
-            <MainTVShowDetails tvShow_id={tvShow_id}/>
+            <MainTVShowDetails/>
             <MainTVShowRecommendations tvShow_id={tvShow_id}/>
         </div>
     );

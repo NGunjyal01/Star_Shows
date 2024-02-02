@@ -1,11 +1,11 @@
 import { useSelector } from "react-redux";
-import useMainTVShowCast from "../../../hooks/TVShowsHooks/useMainTVShowCast";
 import SeasonDetails from "./SeasonDetails";
 import AddWatchlistIcon from "../../Common Features/AddWatchlistIcon";
+import { useParams } from "react-router-dom";
 
-const MainTVShowDetails = ({tvShow_id}) => {
+const MainTVShowDetails = () => {
 
-    useMainTVShowCast(tvShow_id);
+    const {tvShow_id} = useParams();
     const mainTVShowDetails = useSelector(store => store.mainTVShow.mainTVShowDetails);
     const mainTVShowCast = useSelector(store => store.mainTVShow.mainTVShowCast);
     const { first_air_date,genres,number_of_episodes,number_of_seasons,overview,seasons,poster_path } = mainTVShowDetails;
@@ -13,7 +13,7 @@ const MainTVShowDetails = ({tvShow_id}) => {
     
     return (
         <div className="text-white sm:p-10 p-5 -mt-7 sm:mt-0">
-            <div className="absolute sm:hidden block right-5 top-[41%]"><AddWatchlistIcon id={tvShow_id} poster_path={poster_path}/></div>
+            <div className="absolute sm:hidden block right-5 top-[41%]"><AddWatchlistIcon id={tvShow_id} poster_path={poster_path} type={"TVShow"}/></div>
             <div className="grid grid-cols-12">
                 <div className="sm:col-span-8 col-span-full">
                     <div className="flex sm:text-lg text-sm">

@@ -1,14 +1,12 @@
 import { useSelector } from "react-redux";
-import useSimilarTVShows from "../../../hooks/TVShowsHooks/useSimilarTVShows";
-import useTVShowRecommendations from "../../../hooks/TVShowsHooks/useTVShowRecommendations";
 import Mo_Tv_Card from "../../Common Features/Mo_Tv_Card";
 import { useEffect, useState } from "react";
 import LoadMoreBtn from "../../Common Features/LoadMoreBtn";
+import useRecommendedTVShows from "../../../hooks/TVShowsHooks/useRecommendedTVShows";
 
 const MainTVShowRecommendations = ({tvShow_id}) => {
 
-    useSimilarTVShows(tvShow_id);
-    useTVShowRecommendations(tvShow_id);
+    useRecommendedTVShows(tvShow_id);
 
     const similarTVShows = useSelector(store => store.mainTVShow.similarTVShows);
     const tvShowRecommendations = useSelector(store => store.mainTVShow.tvShowRecommendations);

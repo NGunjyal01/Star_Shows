@@ -1,10 +1,9 @@
 import { useEffect } from "react";
 import { API_OPTIONS } from "../../utils/constants";
 import { useDispatch } from "react-redux";
-import { addTVShowRecommendations } from "../../utils/Slices/mainTVShowSlice";
+import { addSimilarTVShows, addTVShowRecommendations } from "../../utils/Slices/mainTVShowSlice";
 
-
-const useTVShowRecommendations = (tvShow_id) => {
+const useRecommendedTVShows = (tvShow_id) => {
 
     const dispatch = useDispatch();
 
@@ -14,9 +13,16 @@ const useTVShowRecommendations = (tvShow_id) => {
         dispatch(addTVShowRecommendations(json.results));
     };
 
+    const getSimilarTVShows = async()=>{
+        const data = await fetch("https://api.themoviedb.org/3/tv/" + tvShow_id + "/similar", API_OPTIONS);
+        const json = await data.json();
+        dispatch(addSimilarTVShows(json.results));
+    };
+
     useEffect(()=>{
         getTVShowRecommendations();
+        getSimilarTVShows();
     },[tvShow_id]);
 }
 
-export default useTVShowRecommendations;
+export default useRecommendedTVShows;

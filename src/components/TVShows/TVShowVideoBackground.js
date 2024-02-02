@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import useTVShowTrailer from "../../hooks/TVShowsHooks/useTVShowTrailer";
 
-const VideoBackground = ({ tvShow_id }) => { 
+const TVShowVideoBackground = ({ tvShow_id }) => { 
 
     //fechting movie trailer and update the store
     useTVShowTrailer(tvShow_id);
@@ -19,4 +19,4 @@ const VideoBackground = ({ tvShow_id }) => {
     );
 };
 
-export default VideoBackground;
+export default TVShowVideoBackground;
