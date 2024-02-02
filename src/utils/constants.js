@@ -33,6 +33,15 @@ export const tvShowsType = [
   { label:"Popular Shows" },
   { label:"Top Rated Shows" }];
 
+export const headers = [
+  { name:"Home", to:"/browse" },
+  { name:"Movies", to:"/movies" },
+  { name:"TV Shows", to:"/tvshows" },
+  { name:"Watchlist", to:"/watchlist" },
+  { name:"Genre", to:"/genre/35" },
+  { name:"GPT Search", to:"/GPTSearch" },
+];
+
 export const OPENAI_KEY = process.env.REACT_APP_OPENAI_KEY;
 
 export const Movies_Genres = [

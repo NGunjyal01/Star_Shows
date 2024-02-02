@@ -21,7 +21,7 @@ const useMovieDetails = (movie_id) => {
 
     useEffect(()=>{
         getMovieDetails();
-        
+        getMainMovieCast();
     },[movie_id]);
     
 };

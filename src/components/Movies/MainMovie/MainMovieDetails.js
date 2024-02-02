@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import AddWatchlistIcon from "../../Common Features/AddWatchlistIcon";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 
 const MainMovieDetails = () => {
@@ -13,7 +13,9 @@ const MainMovieDetails = () => {
 
     return  (
         <div className="text-white sm:p-10 p-5 -mt-7 sm:mt-0">
-            <div className="absolute sm:hidden block right-5 top-[41%]"><AddWatchlistIcon id={movie_id} poster_path={poster_path} type={"Movie"}/></div>
+            <div className="absolute sm:hidden block right-5 top-[41%]">
+                <AddWatchlistIcon id={movie_id} poster_path={poster_path} type={"Movie"}/>
+            </div>
             <div className="grid grid-cols-12">
                 <div className="sm:col-span-8 col-span-full">
                     <div className="flex sm:text-lg text-sm">
@@ -24,8 +26,16 @@ const MainMovieDetails = () => {
                     <p className="text-base sm:text-lg sm:mt-4 mt-3">{overview}</p>
                 </div>
                 <div className="sm:ml-7 mt-3 sm:mt-0 sm:col-span-4 col-span-full">
-                    <h2 className="sm:text-base text-sm"><span className="text-gray-500">Cast:</span> {mainMovieCast?.map(cast => cast.name).slice(0,7).join(", ")}</h2>
-                    <h2 className="sm:text-base text-sm"><span className="text-gray-500">Genre:</span> {genres?.map(genre => genre.name).join(", ")}</h2>
+                    <h2 className="sm:text-base text-sm">
+                        <span className="text-gray-500">Cast:</span> 
+                        {mainMovieCast?.map(cast => cast.name).slice(0,7).join(", ")}
+                    </h2>
+                    <div className="sm:text-base text-sm flex space-x-1">
+                        <h1 className="text-gray-500">Genre:</h1> 
+                        <div className="flex sm:space-x-2 space-x-1">
+                            {genres?.map(genre => <Link to={"/genre/"+genre.id} className="md:hover:text-[#00ADB5]">{genre.name}</Link>)}
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

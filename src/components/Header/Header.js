@@ -1,14 +1,14 @@
 import { useEffect,useState } from "react";
 import { auth } from "../../utils/firebase";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { onAuthStateChanged } from "firebase/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../../utils/Slices/userSlice";
 import SideMenu from "./SideMenu";
 import SearchBar from "./SearchBar";
-import TopMenu from "./TopMenu";
 import { addDoc, collection, doc, getDoc, setDoc } from "firebase/firestore";
 import { getFirestore } from "firebase/firestore";
+import { headers } from "../../utils/constants";
 
 const Header = () => {
 
@@ -75,7 +75,9 @@ const Header = () => {
       {user && (
         <div className="grid grid-cols-12 w-full items-center">
           <h1 className="text-xl md:text-4xl font-bold top-10 col-span-4 md:col-span-2 md:hover:text-[#00ADB5]">L O G O</h1>
-          <TopMenu/>
+          <div className="hidden md:block col-span-4 mx-auto z-20">
+            {headers.map(header => <NavLink key={header.name} to={header.to} className={({isActive}) => `px-2 md:hover:text-[#00ADB5] ${isActive?"text-[#00ADB5]":""}`}>{header.name}</NavLink>)}
+          </div>
           <SearchBar/>
           <SideMenu/>
         </div>
